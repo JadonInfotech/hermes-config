@@ -1,0 +1,62 @@
+# Secrets - NEVER commit
+.env
+.env.*
+auth.json
+auth.json.*
+auth.lock
+
+# Database
+state.db
+state.db-*
+state.db-shm
+state.db-wal
+
+# Logs and sessions
+logs/
+sessions/
+*.log
+
+# Hermes bundled portable git (don't track - large)
+git/
+
+# Hermes bundled node
+node/
+node_modules/
+node_cache/
+
+# Ollama models cache
+ollama_cloud_models_cache.json
+models_dev_cache.json
+
+# Cache files
+cache/
+bootstrap-cache/
+
+# Desktop installer artifacts
+desktop-build-stamp.json
+hermes-setup.exe
+
+# Cron lock files
+cron/.jobs.lock
+cron/.tick.lock
+cron/ticker_*
+cron/heartbeat
+cron/last_success
+
+# State snapshots
+state-snapshots/
+
+# Audio/image cache
+audio_cache/
+image_cache/
+memories/
+
+# Pairing
+pairing/
+
+# Portable git submodule
+hermes-agent/
+
+# OS files
+.DS_Store
+Thumbs.db
