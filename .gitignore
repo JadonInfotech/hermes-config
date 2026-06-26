@@ -11,30 +11,19 @@ state.db-*
 state.db-shm
 state.db-wal
 
+# Hermes bundled binaries (large files - don't track)
+bin/
+shared/
+git/
+node/
+node_modules/
+cache/
+bootstrap-cache/
+
 # Logs and sessions
 logs/
 sessions/
 *.log
-
-# Hermes bundled portable git (don't track - large)
-git/
-
-# Hermes bundled node
-node/
-node_modules/
-node_cache/
-
-# Ollama models cache
-ollama_cloud_models_cache.json
-models_dev_cache.json
-
-# Cache files
-cache/
-bootstrap-cache/
-
-# Desktop installer artifacts
-desktop-build-stamp.json
-hermes-setup.exe
 
 # Cron lock files
 cron/.jobs.lock
@@ -54,9 +43,22 @@ memories/
 # Pairing
 pairing/
 
-# Portable git submodule
+# Hermes source
 hermes-agent/
 
 # OS files
 .DS_Store
 Thumbs.db
+
+# Hermes installer
+desktop-build-stamp.json
+hermes-setup.exe
+
+# Misc Hermes files
+zadon
+zadon.pub
+.skills_prompt_snapshot.json
+.update_check
+.update_exit_code
+ollama_cloud_models_cache.json
+models_dev_cache.json
