@@ -84,13 +84,29 @@ def import_sessions():
     USING fts5(session_id, role, content, content="messages", content_rowid="id")
     ''')
     
-    # Create supporting tables
+    # Create supporting tables - EXACT schema from Hermes
     conn.execute('CREATE TABLE schema_version (version INTEGER)')
-    conn.execute('CREATE TABLE state_meta (key TEXT PRIMARY KEY, value TEXT, updated_at REAL)')
-    conn.execute('CREATE TABLE compression_locks (session_id TEXT PRIMARY KEY)')
+    conn.execute('CREATE TABLE state_meta (key TEXT PRIMARY KEY, value TEXT)')
+    conn.execute('''
+    CREATE TABLE compression_locks (
+        session_id TEXT PRIMARY KEY,
+        holder TEXT NOT NULL,
+        acquired_at REAL NOT NULL,
+        expires_at REAL NOT NULL
+    )
+    ''')
     
     # Schema version
     conn.execute('INSERT INTO schema_version VALUES (1)')
+    
+    # Create indexes - matching Hermes schema
+    conn.execute('CREATE INDEX IF NOT EXISTS idx_sessions_source ON sessions(source)')
+    conn.execute('CREATE INDEX IF NOT EXISTS idx_sessions_source_id ON sessions(source, id)')
+    conn.execute('CREATE INDEX IF NOT EXISTS idx_sessions_parent ON sessions(parent_session_id)')
+    conn.execute('CREATE INDEX IF NOT EXISTS idx_sessions_started ON sessions(started_at DESC)')
+    conn.execute('CREATE INDEX IF NOT EXISTS idx_messages_session ON messages(session_id, timestamp)')
+    conn.execute('CREATE INDEX IF NOT EXISTS idx_messages_session_active ON messages(session_id, active, timestamp)')
+    conn.execute('CREATE INDEX IF NOT EXISTS idx_compression_locks_expires ON compression_locks(expires_at)')
     
     # Import each session
     sessions_imported = 0
@@ -135,11 +151,11 @@ def import_sessions():
             sessions_imported += 1
             
             # Import messages
-            msg_cols = ['session_id', 'role', 'content', 'tool_call_id', 'tool_calls', 'tool_name',
+            msg_cols = ['id', 'session_id', 'role', 'content', 'tool_call_id', 'tool_calls', 'tool_name',
                        'timestamp', 'token_count', 'finish_reason', 'reasoning', 'reasoning_content',
                        'reasoning_details', 'codex_reasoning_items', 'codex_message_items',
                        'platform_message_id', 'observed', 'active', 'compacted']
-            
+
             for msg in session.get('messages', []):
                 msg_data = []
                 msg['session_id'] = session_id  # Ensure session_id is set
@@ -155,10 +171,11 @@ def import_sessions():
                         else:
                             val = None
                     msg_data.append(val)
-                
+
                 placeholders = ','.join(['?' for _ in msg_cols])
+                col_names = ','.join(msg_cols)
                 try:
-                    conn.execute(f'INSERT INTO messages VALUES ({placeholders})', msg_data)
+                    conn.execute(f'INSERT INTO messages ({col_names}) VALUES ({placeholders})', msg_data)
                     messages_imported += 1
                 except Exception as e:
                     print(f'  Error importing message: {e}')
