@@ -57,14 +57,6 @@ C:\Users\<user>\AppData\Local\hermes\
 | .env file | `~/.hermes/.env` |
 | Skills | `~/.hermes/skills/` |
 
-## Key Finding from Session
-
-When user said `cd ~/.hermes` didn't work on Windows:
-- The error was: "The system cannot find the path specified"
-- Root cause: path doesn't exist on Windows Hermes Desktop
-- Fix: use `cd /c/Users/<user>/AppData/Local/hermes` in git-bash
-- Or better: always use `hermes config path` to get the real path
-
 ## SSH Key Location
 
 SSH keys are stored at `~/.ssh/` which on Windows git-bash resolves to:
@@ -74,3 +66,48 @@ C:\Users\<user>\.ssh\
 
 This path is consistent across Windows — SSH config always lives here,
 independent of where Hermes is installed.
+
+## Session Storage Location
+
+**Sessions are stored in `state.db`, NOT in `sessions/` directory.**
+- The `sessions/` folder is empty (just a routing index)
+- All conversation history, messages, and FTS indexes are in `state.db`
+- This means syncing `state.db` syncs all session history
+
+## File Locking Issues
+
+When Hermes is running on Windows, these files are LOCKED:
+- `state.db` (always locked while Hermes running)
+- `state.db-shm` (SQLite shared memory)
+- `state.db-wal` (SQLite WAL journal)
+- `logs/*.lock` files
+
+**Workaround:** Use `git checkout origin/main -- <files>` instead of `git reset --hard` for file-by-file sync when files are locked.
+
+## Git LFS Requirement
+
+`state.db` (typically 1-2MB) may exceed GitHub's 50MB soft limit without Git LFS:
+```bash
+git lfs install
+git lfs track "*.db"
+git add .gitattributes
+```
+
+## SSH Setup on Windows
+
+### Start SSH Agent and Add Key
+```bash
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+
+### Add GitHub Host Keys
+```bash
+ssh-keyscan -t rsa,ecdsa,ed25519 github.com >> ~/.ssh/known_hosts 2>/dev/null
+```
+
+### Verify Connection
+```bash
+ssh -T git@github.com
+# Expected: "Hi <username>! You've successfully authenticated..."
+```

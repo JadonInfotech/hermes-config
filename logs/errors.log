@@ -57,3 +57,33 @@ PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ZADON\\AppData\\Loca
 2026-06-29 01:18:21,903 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
 2026-06-29 01:18:22,169 WARNING tools.registry: check_fn check_web_api_key returned False; dependent tools will be unavailable this turn
 2026-06-29 01:18:23,623 WARNING tui_gateway.server: config.yaml has empty section(s): `context_file_max_chars`, `max_concurrent_sessions`. Remove the line(s) or set them to `{}` — empty sections silently drop nested settings.
+2026-06-29 01:26:29,134 WARNING [20260615_224206_01466a] agent.tool_executor: Tool terminal returned error (8.79s): {"output": "To github.com:JadonInfotech/hermes-config.git\n ! [rejected]        main -> main (non-fast-forward)\nerror: failed to push some refs to 'github.com:JadonInfotech/hermes-config.git'\nhint: 
+2026-06-29 01:27:28,483 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-06-29 01:27:28,533 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-06-29 01:27:29,035 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 01:27:29,292 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 01:27:29,306 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 01:27:29,320 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 01:27:29,889 WARNING tools.registry: check_fn check_web_api_key returned False; dependent tools will be unavailable this turn
+2026-06-29 01:27:43,644 WARNING [20260615_224206_01466a] agent.tool_executor: Tool search_files returned error (0.00s): {"error": "Background review denied non-whitelisted tool: search_files. Only memory/skill tools are allowed."}
+2026-06-29 01:27:55,737 WARNING [20260615_224206_01466a] agent.tool_executor: Tool search_files returned error (0.00s): {"error": "Background review denied non-whitelisted tool: search_files. Only memory/skill tools are allowed."}
+2026-06-29 01:34:34,816 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-06-29 01:34:34,848 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-06-29 01:34:35,097 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 01:34:35,886 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 01:34:35,896 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 01:34:35,905 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 01:34:36,157 WARNING tools.registry: check_fn check_web_api_key returned False; dependent tools will be unavailable this turn
+2026-06-29 01:34:37,433 WARNING tui_gateway.server: config.yaml has empty section(s): `context_file_max_chars`, `max_concurrent_sessions`. Remove the line(s) or set them to `{}` — empty sections silently drop nested settings.
+2026-06-29 01:39:18,621 WARNING [20260615_224206_01466a] agent.tool_executor: Tool terminal returned error (25.56s): {"output": "Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.", "exit_code
+2026-06-29 01:40:40,193 WARNING [20260615_224206_01466a] agent.tool_executor: Tool terminal returned error (16.37s): {"output": "Traceback (most recent call last):\r\n  File \"<string>\", line 12, in <module>\r\nsqlite3.OperationalError: no such column: created_at\r\nTotal sessions: 1", "exit_code": 1, "error": null
+2026-06-29 01:44:28,513 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-06-29 01:44:28,562 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-06-29 01:44:28,987 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 01:44:29,297 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 01:44:29,315 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 01:44:29,334 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 01:44:29,739 WARNING tools.registry: check_fn check_web_api_key returned False; dependent tools will be unavailable this turn
+2026-06-29 01:45:46,841 WARNING [20260615_224206_01466a] agent.tool_executor: Tool skill_manage returned error (0.06s): {"success": false, "error": "Skill 'autonomous-ai-agents/hermes-sync' not found in active profile 'default'. Use skills_list() to see available skills."}
+2026-06-29 01:48:19,654 WARNING [20260615_224206_01466a] agent.tool_executor: Tool skill_manage returned error (1.09s): {"success": false, "error": "Could not find a match for old_string in the file\n\nDid you mean one of these sections?\n 271| ```\n 272| \n 273| ### 2. Clone Config from GitHub\n 274| \n 275| **First, 
+2026-06-29 01:48:27,245 WARNING [20260615_224206_01466a] agent.tool_executor: Tool read_file returned error (0.00s): {"error": "Background review denied non-whitelisted tool: read_file. Only memory/skill tools are allowed."}

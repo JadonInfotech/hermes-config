@@ -42,6 +42,11 @@ Thumbs.db
 desktop-build-stamp.json
 hermes-setup.exe
 
+# Session database - use sync_sessions JSON files instead
+state.db
+state.db-shm
+state.db-wal
+
 # Misc Hermes files
 zadon
 zadon.pub

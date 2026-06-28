@@ -54,12 +54,20 @@ the Windows or Unix path above as appropriate.
 - `cron/` — scheduled jobs (but exclude lock files)
 - `SOUL.md` — agent identity
 
+### Sync (commit to git) — for multi-desktop session sync
+- `state.db` — SQLite session store (contains ALL session history, messages, FTS index)
+- `state.db-shm`, `state.db-wal` — SQLite WAL journal files
+- `memories/` — persistent cross-session memory
+
+> **Important:** Sessions are stored in `state.db`, NOT in `sessions/` directory.
+> The `sessions/` folder is empty — it's just a routing index.
+> For multi-desktop setups where you want sessions to sync, include `state.db`.
+
 ### NOT Sync (never commit)
 - `.env` — API keys and secrets
-- `auth.json` — OAuth tokens (device-scoped)
-- `logs/` — log files
-- `sessions/` — session history (device-specific paths)
-- `state.db` — SQLite session store
+- `auth.json` — OAuth tokens (device-scoped, per-machine)
+- `logs/` — log files (timestamps/metadata not useful cross-machine)
+- `sessions/` — empty directory, session data is in state.db
 - `cache/` — model catalogs, caches
 - `bin/`, `shared/`, `node/` — Hermes bundled binaries
 - `hermes-agent/` — Hermes source code
@@ -111,7 +119,7 @@ git config user.name "Your Name"
 
 ### 4. Create `.gitignore`
 
-This is critical — prevents secrets and large binaries from being committed:
+This controls what gets synced. For **multi-desktop session sync**, exclude only secrets and large binaries:
 
 ```gitignore
 # Secrets - NEVER commit
@@ -121,12 +129,6 @@ auth.json
 auth.json.*
 auth.lock
 
-# Database
-state.db
-state.db-*
-state.db-shm
-state.db-wal
-
 # Hermes bundled binaries (large - don't track)
 bin/
 shared/
@@ -135,11 +137,6 @@ node/
 node_modules/
 cache/
 bootstrap-cache/
-
-# Logs and sessions
-logs/
-sessions/
-*.log
 
 # Cron lock files
 cron/.jobs.lock
@@ -154,7 +151,6 @@ state-snapshots/
 # Audio/image cache
 audio_cache/
 image_cache/
-memories/
 
 # Pairing
 pairing/
@@ -180,66 +176,89 @@ ollama_cloud_models_cache.json
 models_dev_cache.json
 ```
 
-### 5. First Commit and Push
+> **Note:** Unlike the default hermes-agent `.gitignore`, this version DOES sync:
+> - `state.db`, `state.db-shm`, `state.db-wal` (sessions)
+> - `memories/` (persistent memory)
+>
+> If you do NOT want session sync, add these lines:
+> ```
+> state.db
+> state.db-*
+> memories/
+> ```
+
+### 5. Set Up Git LFS (Required for state.db and other binaries)
+
+Large binary files (especially `state.db`) need Git LFS or they may fail to push:
+
+```bash
+git lfs install
+git lfs track "*.db"
+git lfs track "*.db-shm"
+git lfs track "*.db-wal"
+```
+
+Add `.gitattributes` to git:
+```bash
+git add .gitattributes
+```
+
+### 6. First Commit and Push
 
 ```bash
 cd "$HERMES_HOME"
-git add .gitignore config.yaml SOUL.md skills/
+git add .gitignore .gitattributes config.yaml SOUL.md skills/ state.db* memories/
 git commit -m "Initial Hermes config sync"
 git branch -M main
 git push -u origin main
 ```
 
-### 6. Back Up `.env`
+### 6. Create Sync Scripts
 
-The `.env` file contains API keys. Copy it to a password manager
-(1Password, Bitwarden, etc.) — you'll need it for Desktop B.
+Create these three batch scripts in `$HERMES_HOME` for easy syncing:
 
-```bash
-cat "$HERMES_HOME/.env"
-```
+#### sync-desktop1.bat — Run ONCE on Desktop 1 to push existing sessions
 
-### 7. Create the Sync Helper Script
-
-```bash
-mkdir -p ~/.local/bin
-
-# For Windows (git-bash):
-cat > ~/.local/bin/hsync <<'EOF'
-#!/usr/bin/env bash
-cd /c/Users/YOUR_USERNAME/AppData/Local/hermes || {
-    echo "Hermes config not found"
-    exit 1
-}
+```batch
+@echo off
+echo Hermes Sync - Desktop 1 (First Setup)
+cd /d "%LOCALAPPDATA%\hermes"
 git add -A
-git commit -m "sync: $(date '+%Y-%m-%d %H:%M')" 2>/dev/null || true
-git pull --rebase origin main
-git push origin main
-echo "Sync complete"
-EOF
+git commit -m "Initial sync from Desktop 1 - %date%"
+git push -u origin main --force
+pause
+```
 
-# For Unix/macOS:
-cat > ~/.local/bin/hsync <<'EOF'
-#!/usr/bin/env bash
-cd ~/.hermes || { echo "Hermes config not found"; exit 1; }
+#### sync-desktop2.bat — Run ONCE on Desktop 2 to pull Desktop 1's sessions
+
+```batch
+@echo off
+echo Hermes Sync - Desktop 2 (Pull & Sync)
+cd /d "%LOCALAPPDATA%\hermes"
+git fetch origin main
+copy "%LOCALAPPDATA%\hermes\.env" "%LOCALAPPDATA%\hermes\.env.backup" /Y
+git reset --hard origin/main
+copy "%LOCALAPPDATA%\hermes\.env.backup" "%LOCALAPPDATA%\hermes\.env" /Y
+del "%LOCALAPPDATA%\hermes\.env.backup"
+pause
+```
+
+#### sync.bat — Run before each session on any desktop
+
+```batch
+@echo off
+echo Hermes Sync - Ongoing Sync
+cd /d "%LOCALAPPDATA%\hermes"
+git fetch origin main
+git stash push -m "Local secrets" -- .env auth.json .env.backup 2>nul
+git pull origin main --no-edit
 git add -A
-git commit -m "sync: $(date '+%Y-%m-%d %H:%M')" 2>/dev/null || true
-git pull --rebase origin main
+git commit -m "Sync from %computername% %date% %time%" 2>nul
 git push origin main
-echo "Sync complete"
-EOF
-
-chmod +x ~/.local/bin/hsync
+pause
 ```
 
-Add to PATH if needed:
-```bash
-# bash
-echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
-
-# zsh
-echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
-```
+> **Always close Hermes before running sync scripts** — `state.db` is locked while Hermes is running.
 
 ---
 
@@ -253,18 +272,37 @@ curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
 
 ### 2. Clone Config from GitHub
 
+**First, close Hermes completely** — `state.db` is locked while Hermes is running.
+
 ```bash
 cd "$HERMES_HOME"
 git init
 git remote add origin git@github.com:YOUR_USERNAME/hermes-config.git
+```
+
+**Option A: Fresh machine (no existing config to preserve)**
+```bash
 git pull origin main
 ```
 
-If there are conflicts with existing files:
+**Option B: Machine with existing config you want to overwrite with GitHub version**
 ```bash
-rm -rf auth.json logs sessions state.db
-git pull origin main
+# Backup .env first (contains API keys)
+cp .env .env.backup
+
+# Reset to GitHub version (this will overwrite state.db and other files)
+git fetch origin
+git checkout origin/main -- config.yaml SOUL.md skills/ state.db* memories/
+
+# Restore .env from backup
+cp .env.backup .env
+rm .env.backup
 ```
+
+> **Why use `git checkout --` instead of `git reset --hard`?**
+> `git reset --hard` may fail if some files are locked (e.g. `state.db` or `logs/*.lock` files).
+> `git checkout origin/main -- <files>` works file-by-file and skips locked files.
+> Use `git reset --hard origin/main` only when Hermes is fully closed.
 
 ### 3. Recreate `.env`
 
@@ -293,22 +331,40 @@ Same as Desktop A, Step 7 — copy the `hsync` script to `~/.local/bin/`.
 
 ## Daily Usage
 
-Run `hsync` before and after each session:
+### Workflow for Multi-Desktop Session Sync
+
+**Step 1: Desktop 1 (First Time Only)**
+1. Close Hermes completely
+2. Run `sync-desktop1.bat` — pushes all existing sessions to GitHub
+
+**Step 2: Desktop 2 (First Time Only)**
+1. Close Hermes completely
+2. Run `sync-desktop2.bat` — pulls Desktop 1's sessions from GitHub
+
+**Step 3: Ongoing (Before Starting Hermes on any desktop)**
+Run `sync.bat`
+
+### Command Line Alternative
+
+If you prefer terminal commands:
 
 ```bash
-hsync
-```
+cd "$HERMES_HOME"
 
-This will:
-1. Stage all changes
-2. Commit with a timestamp
-3. Pull any changes from the other machine
-4. Push back up
+# Fetch and pull latest
+git fetch origin main
+git pull origin main
+
+# Stage and push local changes
+git add -A
+git commit -m "sync: $(date)" 2>/dev/null || true
+git push origin main
+```
 
 For automatic sync, create a cron job:
 ```bash
 hermes cron create "45 9,18 * * *" \
-  --prompt "Run: hsync" \
+  --prompt "Run: cd ~/.hermes && git pull --rebase origin main && git push origin main" \
   --name "Daily Hermes sync"
 ```
 
@@ -316,20 +372,84 @@ hermes cron create "45 9,18 * * *" \
 
 ## Troubleshooting
 
-### "Permission denied" when pushing
-- SSH key not added to GitHub → see Step 2 above
+### "Permission denied (publickey)" when pushing
+SSH key exists but GitHub rejected it. Two possible causes:
+
+**Cause 1: GitHub host keys not trusted**
+```bash
+ssh-keyscan -t rsa,ecdsa,ed25519 github.com >> ~/.ssh/known_hosts 2>/dev/null
+```
+
+**Cause 2: SSH key not added to GitHub**
+- Go to https://github.com/settings/keys
+- Add your public key (`~/.ssh/id_ed25519.pub`)
+- Verify: `ssh -T git@github.com` → should say "Hi <username>! You've successfully authenticated..."
+
+**Cause 3: SSH key not loaded in agent**
+```bash
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+
+### "Permission denied" when pushing (continued)
+- SSH key not added to GitHub → see steps above
 - Wrong SSH key being used → check `~/.ssh/config` or run:
   ```bash
   ssh -vT git@github.com
   ```
 
-### Large file warnings on push
-- Some large files (e.g. `bin/uv.exe` at 66MB) may exceed GitHub's 50MB limit
-- They should already be in `.gitignore` — if not, add them and push again
+### "Host key verification failed" on git pull
+GitHub's host keys aren't in `known_hosts`. Fix:
+```bash
+ssh-keyscan -t rsa,ecdsa,ed25519 github.com >> ~/.ssh/known_hosts
+```
+
+### Sessions not syncing after pull
+**This is expected on first setup.** If Desktop 1 was never set up with git sync, its sessions were never pushed to GitHub.
+
+**Solution:** On Desktop 1, close Hermes and run:
+```bash
+cd "$HERMES_HOME"
+git add -A
+git commit -m "Push existing sessions"
+git push origin main
+```
+
+Then on Desktop 2, run `sync-desktop2.bat`.
+
+### "Unable to unlink old 'state.db'" during git reset
+**Cause:** Hermes is still running and has `state.db` locked.
+
+**Fix:**
+1. Close Hermes completely (check Task Manager for stray processes)
+2. Use `git checkout` instead of `git reset` for a file-by-file sync:
+   ```bash
+   git checkout origin/main -- state.db state.db-shm state.db-wal memories/
+   ```
+
+### Large file warnings on push / "LFS" errors
+`state.db` is a binary file that may exceed GitHub's 50MB limit. Set up Git LFS:
+```bash
+git lfs install
+git lfs track "*.db"
+git add .gitattributes
+git push origin main
+```
+
+### Git push fails with "non-fast-forward"
+Remote has commits your local repo doesn't have (other desktop pushed first).
+
+**Fix:**
+```bash
+git fetch origin
+git reset --hard origin/main  # Or use the Desktop 2 workflow above
+```
 
 ### OAuth tokens don't work on Desktop B
-- OAuth tokens (GitHub Copilot, etc.) are device-scoped by design
-- Run `hermes auth` on Desktop B and re-authenticate
+OAuth tokens are device-scoped by design. Run on Desktop B:
+```bash
+hermes auth
+```
 
 ### Git identity error on commit
 ```bash
@@ -338,10 +458,18 @@ git config user.name "Your Name"
 ```
 
 ### SSH key generation on Windows hangs
-- Use `-N ""` to set empty passphrase and skip interactive prompts:
-  ```bash
-  ssh-keygen -t ed25519 -C "hermes-sync" -f ~/.ssh/id_ed25519 -N ""
-  ```
+Use `-N ""` to set empty passphrase and skip interactive prompts:
+```bash
+ssh-keygen -t ed25519 -C "hermes-sync" -f ~/.ssh/id_ed25519 -N ""
+```
+
+### state.db shows 1 session after sync
+**This means Desktop 1 never pushed its sessions to GitHub.**
+
+The `state.db` on this machine is correct for THIS machine. Desktop 1's sessions only exist on Desktop 1 until you:
+1. Close Hermes on Desktop 1
+2. Run `sync-desktop1.bat` (or equivalent git commands)
+3. Pull on Desktop 2
 
 ---
 
