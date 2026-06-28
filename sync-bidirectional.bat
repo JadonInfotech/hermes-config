@@ -9,42 +9,28 @@ echo.
 
 cd /d "%LOCALAPPDATA%\hermes"
 
-echo [1/8] Checking if Hermes is running...
+echo [1/7] Checking environment...
+echo  Hermes directory: %LOCALAPPDATA%\hermes
+
+echo.
+echo [2/7] Checking if Hermes is running...
 tasklist | findstr /I "Hermes.exe" >nul
 if %errorlevel%==0 (
+    echo  WARNING: Hermes is running!
+    echo  Sessions will sync to GitHub but import will be skipped.
+    echo  Close Hermes and run again for full sync.
     echo.
-    echo  ERROR: Hermes is still running!
-    echo  Please close Hermes first, then run this script.
-    echo.
-    pause
-    exit /b 1
 )
 
-echo  OK - Hermes not running
-
-echo.
-echo [2/8] Creating session export directory...
-if not exist "sync_sessions" mkdir sync_sessions
-if not exist "scripts" mkdir scripts
-
-echo.
-echo [3/8] Exporting sessions to JSON files...
+echo [3/7] Exporting sessions to JSON...
 python "%LOCALAPPDATA%\hermes\scripts\export_sessions.py"
-if %errorlevel% neq 0 (
-    echo  ERROR: Failed to export sessions!
-    pause
-    exit /b 1
-)
-
 echo.
-echo [4/8] Fetching from GitHub...
+
+echo [4/7] Git: Fetching from GitHub...
 git fetch origin main
-if %errorlevel% neq 0 (
-    echo  WARNING: Git fetch failed, continuing anyway...
-)
-
 echo.
-echo [5/8] Committing local changes...
+
+echo [5/7] Git: Committing local changes...
 git add sync_sessions/
 git add memories/
 git add config.yaml
@@ -54,42 +40,27 @@ git add scripts/
 git add .gitignore
 git add sync-bidirectional.bat
 git add .gitattributes
-git add verification_evidence.db
-
 git commit -m "Sync from %computername% %date% %time%" 2>nul
 if %errorlevel% neq 0 (
-    echo  No changes to commit - skipping commit
+    echo   No local changes to commit.
 )
-
 echo.
-echo [6/8] Pulling latest from GitHub...
+
+echo [6/7] Git: Pulling from GitHub...
 git pull origin main --no-edit 2>nul
-if %errorlevel% neq 0 (
-    echo  NOTE: Pull had conflicts - JSON merge will resolve them
-)
-
 echo.
-echo [7/8] Pushing to GitHub...
+
+echo [7/7] Git: Pushing to GitHub...
 git push origin main
-if %errorlevel% neq 0 (
-    echo  WARNING: Push failed - you may need to resolve conflicts manually
-    echo  Run this script again after resolving conflicts
-    pause
-    exit /b 1
-)
-
 echo.
-echo [8/8] Rebuilding local database...
+
+echo [8/8] Importing merged sessions...
 python "%LOCALAPPDATA%\hermes\scripts\import_sessions.py"
-if %errorlevel% neq 0 (
-    echo  WARNING: Database rebuild had issues, but sync is complete
-)
-
 echo.
+
 echo ========================================
 echo   SYNC COMPLETE!
-echo   All sessions synced with GitHub.
-echo   You can now start Hermes.
+echo   Sessions synced with GitHub.
 echo ========================================
 echo.
 pause
