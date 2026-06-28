@@ -44,8 +44,8 @@ hermes-setup.exe
 
 # Session database - use sync_sessions JSON files instead
 state.db
-state.db-shm
-state.db-wal
+state.db-*
+state_new.db
 
 # Misc Hermes files
 zadon
