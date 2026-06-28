@@ -1,0 +1,66 @@
+2026-06-19 11:44:04,731 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-06-19 11:44:04,969 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-06-19 11:44:05,665 INFO hermes_cli.web_server: Desktop cron ticker started (interval=60s)
+2026-06-19 11:44:50,114 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:57154
+2026-06-19 11:56:15,730 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-06-19 11:56:15,907 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-06-19 11:56:16,275 INFO hermes_cli.web_server: Desktop cron ticker started (interval=60s)
+2026-06-19 11:56:17,281 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:57692
+2026-06-19 12:05:02,754 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-06-19 12:05:03,268 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-06-19 12:05:04,403 INFO hermes_cli.web_server: Desktop cron ticker started (interval=60s)
+2026-06-19 12:05:11,223 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:49891
+2026-06-19 12:17:38,546 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-06-19 12:17:38,783 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-06-19 12:17:39,464 INFO hermes_cli.web_server: Desktop cron ticker started (interval=60s)
+2026-06-19 12:17:41,225 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:50078
+2026-06-19 12:28:14,434 WARNING hermes_cli.web_server: nous device-code poll failed (session=Kwm2CMCq1vwHtQ1UfPxfIw): Timed out waiting for device authorization
+2026-06-19 12:30:59,603 WARNING hermes_cli.web_server: nous device-code poll failed (session=smDI4Sak9xw4IuVCcnJY4Q): Timed out waiting for device authorization
+2026-06-19 12:31:46,819 INFO hermes_cli.web_server: oauth/device: nous login completed (session=PWlRoKD5tORCsjgkEvh1Wg)
+2026-06-19 12:32:04,121 INFO hermes_cli.web_server: oauth/device: nous login completed (session=iLC3X1CmCBgUHLgqkyElLQ)
+2026-06-19 12:32:11,662 ERROR hermes_cli.web_server: POST /api/model/set failed
+Traceback (most recent call last):
+  File "C:\Users\ZADON\AppData\Local\hermes\hermes-agent\hermes_cli\web_server.py", line 3708, in set_model_assignment
+    return await asyncio.to_thread(_apply_assignment)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ZADON\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ZADON\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ZADON\AppData\Local\hermes\hermes-agent\hermes_cli\web_server.py", line 3704, in _apply_assignment
+    return _apply_model_assignment_sync(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ZADON\AppData\Local\hermes\hermes-agent\hermes_cli\web_server.py", line 3765, in _apply_model_assignment_sync
+    save_config(cfg)
+  File "C:\Users\ZADON\AppData\Local\hermes\hermes-agent\hermes_cli\config.py", line 5741, in save_config
+    atomic_yaml_write(
+  File "C:\Users\ZADON\AppData\Local\hermes\hermes-agent\utils.py", line 220, in atomic_yaml_write
+    real_path = atomic_replace(tmp_path, path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ZADON\AppData\Local\hermes\hermes-agent\utils.py", line 87, in atomic_replace
+    os.replace(tmp_str, real_path)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ZADON\\AppData\\Local\\hermes\\.config__gu633m9.tmp' -> 'C:\\Users\\ZADON\\AppData\\Local\\hermes\\config.yaml'
+2026-06-19 12:36:38,726 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-06-19 12:36:38,926 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-06-19 12:36:39,396 INFO hermes_cli.web_server: Desktop cron ticker started (interval=60s)
+2026-06-19 12:36:40,695 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:50825
+2026-06-19 12:54:24,019 WARNING tui_gateway.server: config.yaml has empty section(s): `context_file_max_chars`, `max_concurrent_sessions`. Remove the line(s) or set them to `{}` — empty sections silently drop nested settings.
+2026-06-25 20:14:10,495 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-06-25 20:14:10,706 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-06-25 20:14:11,056 INFO hermes_cli.web_server: Desktop cron ticker started (interval=60s)
+2026-06-25 20:14:12,377 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:49704
+2026-06-26 22:35:15,449 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-06-26 22:35:15,649 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-06-26 22:35:16,333 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-06-26 22:35:17,739 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:52740
+2026-06-26 22:36:52,926 WARNING tui_gateway.server: config.yaml has empty section(s): `context_file_max_chars`, `max_concurrent_sessions`. Remove the line(s) or set them to `{}` — empty sections silently drop nested settings.
+2026-06-28 05:31:44,017 INFO tui_gateway.ws: ws closed peer=127.0.0.1:52740 reason=client_disconnect(code=1006,reason=) messages=52106 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=1
+2026-06-29 00:42:14,237 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:58928
+2026-06-29 00:47:02,162 WARNING tui_gateway.server: config.yaml has empty section(s): `context_file_max_chars`, `max_concurrent_sessions`. Remove the line(s) or set them to `{}` — empty sections silently drop nested settings.
+2026-06-29 01:18:01,860 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-06-29 01:18:02,419 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-06-29 01:18:03,263 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-06-29 01:18:05,493 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:58576
+2026-06-29 01:18:23,623 WARNING tui_gateway.server: config.yaml has empty section(s): `context_file_max_chars`, `max_concurrent_sessions`. Remove the line(s) or set them to `{}` — empty sections silently drop nested settings.

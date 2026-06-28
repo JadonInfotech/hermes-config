@@ -1,0 +1,113 @@
+[hermes] [boot] Resolving Hermes backend
+[hermes] [boot] Resolving Hermes runtime
+[hermes] [boot] Hermes runtime is ready
+[hermes] [boot] Starting Hermes backend via Hermes at C:\Users\ZADON\AppData\Local\hermes\hermes-agent (venv: C:\Users\ZADON\AppData\Local\hermes\hermes-agent\venv)
+[hermes] Starting Hermes backend via Hermes at C:\Users\ZADON\AppData\Local\hermes\hermes-agent (venv: C:\Users\ZADON\AppData\Local\hermes\hermes-agent\venv)
+[hermes] [boot] Waiting for Hermes backend to launch
+[hermes] HERMES_DASHBOARD_READY port=57121
+[hermes] [boot] Waiting for Hermes backend to become ready
+[hermes] [boot] Hermes backend is ready. Finalizing desktop startup
+[hermes] 💾 Saved to custom providers as "Api.codemax.pro" (edit in config.yaml)
+[hermes] [boot] Resolving Hermes backend
+[hermes] [boot] Resolving Hermes runtime
+[hermes] [boot] Hermes runtime is ready
+[hermes] [boot] Starting Hermes backend via Hermes at C:\Users\ZADON\AppData\Local\hermes\hermes-agent (venv: C:\Users\ZADON\AppData\Local\hermes\hermes-agent\venv)
+[hermes] Starting Hermes backend via Hermes at C:\Users\ZADON\AppData\Local\hermes\hermes-agent (venv: C:\Users\ZADON\AppData\Local\hermes\hermes-agent\venv)
+[hermes] [boot] Waiting for Hermes backend to launch
+[hermes] HERMES_DASHBOARD_READY port=57686
+[hermes] [boot] Waiting for Hermes backend to become ready
+[hermes] [boot] Hermes backend is ready. Finalizing desktop startup
+[hermes] [boot] Resolving Hermes backend
+[hermes] [boot] Resolving Hermes runtime
+[hermes] [boot] Hermes runtime is ready
+[hermes] [boot] Starting Hermes backend via Hermes at C:\Users\ZADON\AppData\Local\hermes\hermes-agent (venv: C:\Users\ZADON\AppData\Local\hermes\hermes-agent\venv)
+[hermes] Starting Hermes backend via Hermes at C:\Users\ZADON\AppData\Local\hermes\hermes-agent (venv: C:\Users\ZADON\AppData\Local\hermes\hermes-agent\venv)
+[hermes] [boot] Waiting for Hermes backend to launch
+[hermes] HERMES_DASHBOARD_READY port=49881
+[hermes] [boot] Waiting for Hermes backend to become ready
+[hermes] [boot] Hermes backend is ready. Finalizing desktop startup
+[hermes] [updates] restart: Handing off to the Hermes updater…
+[hermes] [updates] venv shim unlocked; safe to proceed
+[hermes] [updates] launched updater: C:\Users\ZADON\AppData\Local\hermes\hermes-setup.exe --update --branch main; exiting desktop to release venv shim
+[hermes] Hermes backend exited (SIGTERM)
+[hermes] [boot] Resolving Hermes backend
+[hermes] [boot] Resolving Hermes runtime
+[hermes] [boot] Hermes runtime is ready
+[hermes] [boot] Starting Hermes backend via Hermes at C:\Users\ZADON\AppData\Local\hermes\hermes-agent (venv: C:\Users\ZADON\AppData\Local\hermes\hermes-agent\venv)
+[hermes] Starting Hermes backend via Hermes at C:\Users\ZADON\AppData\Local\hermes\hermes-agent (venv: C:\Users\ZADON\AppData\Local\hermes\hermes-agent\venv)
+[hermes] [boot] Waiting for Hermes backend to launch
+[hermes] [boot] Resolving Hermes backend
+[hermes] [boot] Resolving Hermes runtime
+[hermes] [boot] Hermes runtime is ready
+[hermes] [boot] Starting Hermes backend via Hermes at C:\Users\ZADON\AppData\Local\hermes\hermes-agent (venv: C:\Users\ZADON\AppData\Local\hermes\hermes-agent\venv)
+[hermes] Starting Hermes backend via Hermes at C:\Users\ZADON\AppData\Local\hermes\hermes-agent (venv: C:\Users\ZADON\AppData\Local\hermes\hermes-agent\venv)
+[hermes] [boot] Waiting for Hermes backend to launch
+[hermes] HERMES_DASHBOARD_READY port=50070
+[hermes] [boot] Waiting for Hermes backend to become ready
+[hermes] [boot] Hermes backend is ready. Finalizing desktop startup
+[hermes] [updates] restart: Handing off to the Hermes updater…
+[hermes] [updates] venv shim unlocked; safe to proceed
+[hermes] [updates] launched updater: C:\Users\ZADON\AppData\Local\hermes\hermes-setup.exe --update --branch main; exiting desktop to release venv shim
+[hermes] Hermes backend exited (SIGTERM)
+[hermes] [boot] Resolving Hermes backend
+[hermes] [boot] Resolving Hermes runtime
+[hermes] [boot] Hermes runtime is ready
+[hermes] [boot] Starting Hermes backend via Hermes at C:\Users\ZADON\AppData\Local\hermes\hermes-agent (venv: C:\Users\ZADON\AppData\Local\hermes\hermes-agent\venv)
+[hermes] Starting Hermes backend via Hermes at C:\Users\ZADON\AppData\Local\hermes\hermes-agent (venv: C:\Users\ZADON\AppData\Local\hermes\hermes-agent\venv)
+[hermes] [boot] Waiting for Hermes backend to launch
+[hermes] [boot] Resolving Hermes backend
+[hermes] [boot] Resolving Hermes runtime
+[hermes] [boot] Hermes runtime is ready
+[hermes] [boot] Starting Hermes backend via Hermes at C:\Users\ZADON\AppData\Local\hermes\hermes-agent (venv: C:\Users\ZADON\AppData\Local\hermes\hermes-agent\venv)
+[hermes] Starting Hermes backend via Hermes at C:\Users\ZADON\AppData\Local\hermes\hermes-agent (venv: C:\Users\ZADON\AppData\Local\hermes\hermes-agent\venv)
+[hermes] [boot] Waiting for Hermes backend to launch
+[hermes] HERMES_DASHBOARD_READY port=50819
+[hermes] [boot] Waiting for Hermes backend to become ready
+[hermes] [boot] Hermes backend is ready. Finalizing desktop startup
+[hermes] [boot] Resolving Hermes backend
+[hermes] [boot] Resolving Hermes runtime
+[hermes] [boot] Hermes runtime is ready
+[hermes] [boot] Starting Hermes backend via Hermes at C:\Users\ZADON\AppData\Local\hermes\hermes-agent (venv: C:\Users\ZADON\AppData\Local\hermes\hermes-agent\venv)
+[hermes] Starting Hermes backend via Hermes at C:\Users\ZADON\AppData\Local\hermes\hermes-agent (venv: C:\Users\ZADON\AppData\Local\hermes\hermes-agent\venv)
+[hermes] [boot] Waiting for Hermes backend to launch
+[hermes] HERMES_DASHBOARD_READY port=49696
+[hermes] [boot] Waiting for Hermes backend to become ready
+[hermes] [boot] Hermes backend is ready. Finalizing desktop startup
+[hermes] [updates] restart: Handing off to the Hermes updater…
+[hermes] [updates] venv shim unlocked; safe to proceed
+[hermes] [updates] launched updater: C:\Users\ZADON\AppData\Local\hermes\hermes-setup.exe --update --branch main; exiting desktop to release venv shim
+[hermes] Hermes backend exited (SIGTERM)
+[hermes] [boot] Resolving Hermes backend
+[hermes] [boot] Resolving Hermes runtime
+[hermes] [boot] Hermes runtime is ready
+[hermes] [boot] Starting Hermes backend via Hermes at C:\Users\ZADON\AppData\Local\hermes\hermes-agent (venv: C:\Users\ZADON\AppData\Local\hermes\hermes-agent\venv)
+[hermes] Starting Hermes backend via Hermes at C:\Users\ZADON\AppData\Local\hermes\hermes-agent (venv: C:\Users\ZADON\AppData\Local\hermes\hermes-agent\venv)
+[hermes] [boot] Waiting for Hermes backend to launch
+[hermes] [boot] Resolving Hermes backend
+[hermes] [boot] Resolving Hermes runtime
+[hermes] [boot] Hermes runtime is ready
+[hermes] [boot] Starting Hermes backend via Hermes at C:\Users\ZADON\AppData\Local\hermes\hermes-agent (venv: C:\Users\ZADON\AppData\Local\hermes\hermes-agent\venv)
+[hermes] Starting Hermes backend via Hermes at C:\Users\ZADON\AppData\Local\hermes\hermes-agent (venv: C:\Users\ZADON\AppData\Local\hermes\hermes-agent\venv)
+[hermes] [boot] Waiting for Hermes backend to launch
+[hermes] HERMES_DASHBOARD_READY port=52732
+[hermes] [boot] Waiting for Hermes backend to become ready
+[hermes] [boot] Hermes backend is ready. Finalizing desktop startup
+[hermes] [33m⚠ Deprecated .env settings detected:[0m
+[hermes]   [33m⚠[0m TERMINAL_CWD=C:\Users\ZADON found in .env — this is deprecated.
+[hermes]   [2mMove to config.yaml instead:  terminal:\n    cwd: /your/project/path[0m
+[hermes]   [2mThen remove the old entries from C:\Users\ZADON\AppData\Local\hermes/.env[0m
+[hermes] 💾 Self-improvement review: Memory updated · User profile updated
+[hermes] 💾 Self-improvement review: User profile updated
+[hermes] 💾 Self-improvement review: Skill 'hermes-sync' created. · Memory updated
+[hermes] [renderer console] The AudioContext encountered an error from the audio device or the WebAudio renderer. (file:///C:/Users/ZADON/AppData/Local/hermes/hermes-agent/apps/desktop/release/win-unpacked/resources/app.asar/dist/index.html#/20260619_125414_89a505:0)
+[hermes] [renderer console] The AudioContext encountered an error from the audio device or the WebAudio renderer. (file:///C:/Users/ZADON/AppData/Local/hermes/hermes-agent/apps/desktop/release/win-unpacked/resources/app.asar/dist/index.html#/20260619_125414_89a505:0)
+[hermes] 💾 Self-improvement review: Skill 'hermes-config-sync' created. · User profile updated
+[hermes] [boot] Resolving Hermes backend
+[hermes] [boot] Resolving Hermes runtime
+[hermes] [boot] Hermes runtime is ready
+[hermes] [boot] Starting Hermes backend via Hermes at C:\Users\JADON'S\AppData\Local\hermes\hermes-agent (venv: C:\Users\JADON'S\AppData\Local\hermes\hermes-agent\venv)
+[hermes] Starting Hermes backend via Hermes at C:\Users\JADON'S\AppData\Local\hermes\hermes-agent (venv: C:\Users\JADON'S\AppData\Local\hermes\hermes-agent\venv)
+[hermes] [boot] Waiting for Hermes backend to launch
+[hermes] HERMES_DASHBOARD_READY port=58565
+[hermes] [boot] Waiting for Hermes backend to become ready
+[hermes] [boot] Hermes backend is ready. Finalizing desktop startup

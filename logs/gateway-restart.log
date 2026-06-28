@@ -1,0 +1,5 @@
+
+=== gateway-restart started 2026-06-19 11:46:10 ===
+✗ No gateway was running
+✗ Gateway service is not installed
+  Install it now so the gateway starts on login? [Y/n]: 
