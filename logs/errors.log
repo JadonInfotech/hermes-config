@@ -87,3 +87,13 @@ PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ZADON\\AppData\\Loca
 2026-06-29 01:45:46,841 WARNING [20260615_224206_01466a] agent.tool_executor: Tool skill_manage returned error (0.06s): {"success": false, "error": "Skill 'autonomous-ai-agents/hermes-sync' not found in active profile 'default'. Use skills_list() to see available skills."}
 2026-06-29 01:48:19,654 WARNING [20260615_224206_01466a] agent.tool_executor: Tool skill_manage returned error (1.09s): {"success": false, "error": "Could not find a match for old_string in the file\n\nDid you mean one of these sections?\n 271| ```\n 272| \n 273| ### 2. Clone Config from GitHub\n 274| \n 275| **First, 
 2026-06-29 01:48:27,245 WARNING [20260615_224206_01466a] agent.tool_executor: Tool read_file returned error (0.00s): {"error": "Background review denied non-whitelisted tool: read_file. Only memory/skill tools are allowed."}
+2026-06-29 02:37:38,851 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-06-29 02:37:38,899 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-06-29 02:37:39,369 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 02:37:40,306 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 02:37:40,322 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 02:37:40,337 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 02:37:40,757 WARNING tools.registry: check_fn check_web_api_key returned False; dependent tools will be unavailable this turn
+2026-06-29 02:45:01,473 WARNING [20260615_224206_01466a] hermes.lint.lsp: lsp[pyright] spawn/initialize failed for C:\Users\JADON'S\AppData\Local\hermes: TimeoutError: 
+2026-06-29 02:45:50,890 WARNING hermes.lint.lsp: lsp[pyright] spawn/initialize failed for C:\Users\JADON'S\AppData\Local\hermes: OSError: [WinError 193] %1 is not a valid Win32 application
+2026-06-29 02:50:20,040 WARNING [20260615_224206_01466a] agent.tool_executor: Tool terminal returned error (4.06s): {"output": "C:\\Users\\JADON'S\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\python.exe: can't open file \"C:\\\\c\\\\Users\\\\JADON'S\\\\AppData\\\\Local\\\\hermes\\\\scripts\\\\ex
