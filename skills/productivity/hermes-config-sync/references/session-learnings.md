@@ -71,12 +71,52 @@ rm .env.backup
 
 The `.env.backup` itself should also be gitignored.
 
-## Multi-Desktop Session Sync
+## The SQLite Merge Problem
 
-For users who work on multiple adjacent desktops and want session history everywhere:
+**Problem:** Git cannot merge SQLite database files. Git can only do "last write wins" — so if Desktop A and Desktop B both have different sessions, pushing from one overwrites the other.
 
-1. Remove `state.db`, `state.db-*`, `memories/` from `.gitignore`
-2. Accept that `git push`/`pull` includes SQLite session database
-3. Branch naming matters more — use `main` consistently
+**Root cause:** SQLite is a binary format. Git treats it as an opaque blob and cannot diff/merge the contents.
 
-**Trade-off:** Session IDs and conversation metadata get shared. Works well for same-user multi-machine workflows.
+**Solution:** See `references/bidirectional-session-sync.md` for the JSON-based bidirectional sync approach that solves this.
+
+Key insight: Export each session to an individual JSON file. Individual JSON files CAN be merged by Git (text format). Then rebuild the database from merged JSON on each machine.
+
+## Batch Script Path Issues on Windows
+
+When calling Python from batch files, the path detection using `os.path.dirname(__file__)` doesn't work correctly.
+
+**Wrong:**
+```python
+HERMES_DIR = os.path.dirname(os.path.abspath(__file__))  # Returns script dir, not Hermes dir
+```
+
+**Correct:**
+```python
+HERMES_DIR = os.environ.get('LOCALAPPDATA', '') + '\\hermes'
+if not HERMES_DIR or HERMES_DIR == '\\hermes':  # Fallback for edge cases
+    HERMES_DIR = os.path.join(os.path.expanduser('~'), 'AppData', 'Local', 'hermes')
+```
+
+## Database Schema Discovery
+
+When Hermes updates, the `state.db` schema may change. Always discover the actual schema from the live database rather than hardcoding:
+
+```python
+import sqlite3, os
+db = os.environ['LOCALAPPDATA'] + '/hermes/state.db'
+conn = sqlite3.connect(db)
+c = conn.cursor()
+c.execute('PRAGMA table_info(sessions)')
+print([r[1] for r in c.fetchall()])
+c.execute('PRAGMA table_info(messages)')
+print([r[1] for r in c.fetchall()])
+```
+
+## Don't Create sqlite_sequence Table
+
+SQLite auto-creates `sqlite_sequence` internally. Manually creating it causes:
+```
+sqlite3.OperationalError: object name reserved for internal use: sqlite_sequence
+```
+
+Omit from CREATE TABLE statements — SQLite handles it automatically.

@@ -201,3 +201,5 @@ Other machines: run `git pull origin main` (or `git fetch && git reset --hard or
 ---
 
 **Session learnings:** See `references/session-learnings.md` for real-world patterns from multi-desktop sync setups (SSH fingerprint mismatches, branch naming gotchas, state.db locking workarounds).
+
+**Bidirectional session sync:** See `references/bidirectional-session-sync.md` for the JSON-based approach that enables true two-way session merging across machines (solves the SQLite merge problem).
