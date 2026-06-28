@@ -9,10 +9,17 @@
   "started_at": 1781543538.562426,
   "ended_at": null,
   "end_reason": null,
+<<<<<<< HEAD
   "message_count": 252,
   "tool_call_count": 100,
   "input_tokens": 2696300,
   "output_tokens": 32801,
+=======
+  "message_count": 202,
+  "tool_call_count": 91,
+  "input_tokens": 1048554,
+  "output_tokens": 27743,
+>>>>>>> 646974f38b0f4f5ace9b86aa2459fdd2d762cb3e
   "cache_read_tokens": 0,
   "cache_write_tokens": 0,
   "reasoning_tokens": 0,
@@ -26,7 +33,11 @@
   "cost_source": "none",
   "pricing_version": null,
   "title": "Hey there! Just a quick note — I'm not Hermes, I'm **Claude Code**, Anthropic...",
+<<<<<<< HEAD
   "api_call_count": 126,
+=======
+  "api_call_count": 101,
+>>>>>>> 646974f38b0f4f5ace9b86aa2459fdd2d762cb3e
   "handoff_state": null,
   "handoff_platform": null,
   "handoff_error": null,
@@ -34,6 +45,10 @@
   "archived": 0,
   "git_branch": null,
   "git_repo_root": null,
+  "session_key": null,
+  "chat_id": null,
+  "chat_type": null,
+  "thread_id": null,
   "messages": [
     {
       "id": 227,
@@ -4822,6 +4837,7 @@
       "observed": 0,
       "active": 1,
       "compacted": 0
+<<<<<<< HEAD
     },
     {
       "id": 203,
@@ -5330,4 +5346,10 @@
   ],
   "exported_at": "2026-06-29T05:19:07.807641",
   "exported_from": "DESKTOP-FHU4R0J"
+=======
+    }
+  ],
+  "exported_at": "2026-06-29T05:18:08.713640",
+  "exported_from": "DESKTOP-V4OQDHR"
+>>>>>>> 646974f38b0f4f5ace9b86aa2459fdd2d762cb3e
 }
