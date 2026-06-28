@@ -1,0 +1,1 @@
+Jadon (JadonInfotech) uses GitHub sync for Hermes config across multiple machines. Repo: git@github.com:JadonInfotech/hermes-config.git. On second desktop, Hermes was running (multiple Hermes.exe processes) and held file locks on state.db/logs — had to ask user to close the app before git reset could work. Created skill: hermes-config-sync.

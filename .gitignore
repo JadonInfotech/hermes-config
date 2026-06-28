@@ -27,7 +27,6 @@ state-snapshots/
 # Audio/image cache
 audio_cache/
 image_cache/
-memories/
 
 # Pairing
 pairing/
