@@ -1,13 +1,13 @@
 ---
 name: hermes-sync
-description: "Sync Hermes Agent config across multiple machines using a private GitHub repo. Covers: SSH key setup, git repo initialization, .gitignore, the hsync helper script, and Desktop B clone workflow."
-version: 1.0.0
+description: "Sync Hermes Agent config AND sessions across multiple machines using a private GitHub repo. Covers: SSH key setup, git repo initialization, .gitignore, bidirectional session sync with machine-prefixed IDs, git rebase strategy, and Desktop B clone workflow."
+version: 2.0.0
 author: Hermes Agent
 license: MIT
 platforms: [linux, macos, windows]
 metadata:
   hermes:
-    tags: [hermes, sync, backup, multi-device, git, cross-desktop]
+    tags: [hermes, sync, backup, multi-device, git, cross-desktop, bidirectional]
     homepage: https://github.com/NousResearch/hermes-agent
     related_skills: [hermes-agent]
 ---
@@ -264,6 +264,20 @@ pause
 
 ## Desktop B — Clone and Setup
 
+### CRITICAL: Session ID Conflicts Between Desktops
+
+**If you have already synced sessions WITHOUT machine prefixes, you MUST clean up first.**
+
+Both desktops generate session IDs independently (e.g., `20260615_224206_01466a`). When you sync without fixing this, one desktop's sessions OVERWRITE the other's.
+
+**Before doing anything else on Desktop B:**
+
+1. On Desktop A, ensure the new scripts are in place (`export_sessions.py`, `import_sessions.py`, `sync-bidirectional.bat`)
+2. Delete all old session files from the GitHub repo that don't have machine prefixes
+3. Clean up Desktop B's `sync_sessions/` folder
+
+The fix: session files now use `MACHINE_SESSIONID` naming (e.g., `DESKTOP-A_20260615_224206_01466a.json`) so each desktop's sessions stay separate.
+
 ### 1. Install Hermes
 
 ```bash
@@ -439,11 +453,42 @@ git push origin main
 ### Git push fails with "non-fast-forward"
 Remote has commits your local repo doesn't have (other desktop pushed first).
 
-**Fix:**
+The script handles this automatically with `git pull --rebase`. If you're using the old script, fix:
 ```bash
 git fetch origin
-git reset --hard origin/main  # Or use the Desktop 2 workflow above
+git pull origin main --rebase
+git push origin main
 ```
+
+### "sqlite3.DatabaseError: file is not a database"
+**Cause:** `state.db` was locked or corrupted when export ran. Hermes was likely running.
+
+**Fix:**
+1. Close Hermes completely (use Task Manager to kill all Hermes.exe processes)
+2. Check if `state.db-wal` and `state.db-shm` exist — these indicate an unclean shutdown
+3. Try: `git checkout origin/main -- state.db state.db-shm state.db-wal`
+4. If that fails, the DB may be truly corrupted — on the OTHER desktop, run sync to get a clean copy
+
+### "LF will be replaced by CRLF" warnings
+Git is complaining about line ending differences. Fix by setting `.gitattributes`:
+```
+* text=auto
+*.py text eol=lf
+*.bat text eol=crlf
+*.json text eol=lf
+*.md text eol=lf
+sync_sessions/*.json text eol=lf
+```
+Then: `git add .gitattributes` and commit.
+
+### Sessions disappear after bidirectional sync
+**Cause:** Session ID conflicts. Both desktops generated the same session IDs independently.
+
+**Fix (one-time cleanup):**
+1. Delete old non-prefixed session files from GitHub: `git rm sync_sessions/202606*.json`
+2. On both desktops, delete old files in `sync_sessions/` folder
+3. Re-run export to generate machine-prefixed files (e.g., `DESKTOP-A_20260615_*.json`)
+4. Commit and push: the new naming prevents future conflicts
 
 ### OAuth tokens don't work on Desktop B
 OAuth tokens are device-scoped by design. Run on Desktop B:
