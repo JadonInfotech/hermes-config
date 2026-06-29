@@ -17663,3 +17663,643 @@ PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ZADON\\AppData\\Loca
 2026-06-29 03:04:30,576 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-184 (_call):142048 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
 2026-06-29 03:04:35,998 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-184 (_call):142048 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
 2026-06-29 03:04:36,004 INFO [20260615_224206_01466a] agent.conversation_loop: API call #40: model=claude-opus-4-8 provider=custom in=76267 out=71 total=76338 latency=5.6s
+2026-06-29 03:05:08,879 INFO [20260615_224206_01466a] agent.tool_executor: tool terminal completed (32.86s, 369 chars)
+2026-06-29 03:05:09,010 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-186 (_call):161820 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:05:21,615 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-186 (_call):161820 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:05:21,617 INFO [20260615_224206_01466a] agent.conversation_loop: API call #41: model=claude-opus-4-8 provider=custom in=76454 out=427 total=76881 latency=12.7s
+2026-06-29 03:05:21,937 INFO [20260615_224206_01466a] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=claude-opus-4-8 api_calls=41/60 budget=41/60 tool_turns=91 last_msg_role=assistant response_len=1480 session=20260615_224206_01466a
+2026-06-29 03:05:22,340 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=bg-review:160476 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:05:22,720 INFO agent.model_metadata: Could not detect context length for model 'claude-opus-4-8' at https://api.codemax.pro/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-06-29 03:05:22,722 INFO agent.model_metadata: Using hardcoded context length 1,000,000 for model 'claude-opus-4-8' (custom endpoint, catalog match on 'claude-opus-4-8')
+2026-06-29 03:05:22,755 INFO [20260615_224206_01466a] agent.turn_context: conversation turn: session=20260615_224206_01466a model=claude-opus-4-8 provider=custom platform=tui history=204 msg='Review the conversation above and update the skill library. Be ACTIVE — most ses...'
+2026-06-29 03:05:22,893 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-192 (_call):163552 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:06:00,890 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-192 (_call):163552 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:06:00,892 INFO [20260615_224206_01466a] agent.conversation_loop: API call #1: model=claude-opus-4-8 provider=custom in=0 out=489 total=489 latency=38.1s
+2026-06-29 03:06:01,017 INFO [20260615_224206_01466a] agent.tool_executor: tool skill_view completed (0.12s, 5827 chars)
+2026-06-29 03:06:01,093 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-194 (_call):164356 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:06:13,683 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-194 (_call):164356 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:06:13,684 INFO [20260615_224206_01466a] agent.conversation_loop: API call #2: model=claude-opus-4-8 provider=custom in=79791 out=245 total=80036 latency=12.6s
+2026-06-29 03:06:13,777 INFO [20260615_224206_01466a] agent.tool_executor: tool skill_view completed (0.09s, 2251 chars)
+2026-06-29 03:06:13,850 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-196 (_call):156512 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:06:31,257 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-196 (_call):156512 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:06:31,258 INFO [20260615_224206_01466a] agent.conversation_loop: API call #3: model=claude-opus-4-8 provider=custom in=80457 out=577 total=81034 latency=17.5s
+2026-06-29 03:06:31,331 INFO [20260615_224206_01466a] agent.tool_executor: tool skill_manage completed (0.07s, 531 chars)
+2026-06-29 03:06:31,399 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-198 (_call):163508 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:06:51,482 INFO [20260615_224206_01466a] agent.turn_context: conversation turn: session=20260615_224206_01466a model=claude-opus-4-8 provider=custom platform=tui history=204 msg='And I was Curious in github in contributor it shows my username as Mrjadon2001 w...'
+2026-06-29 03:06:51,587 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-201 (_call):158916 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:07:00,036 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-201 (_call):158916 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:07:00,039 INFO [20260615_224206_01466a] agent.conversation_loop: API call #42: model=claude-opus-4-8 provider=custom in=76893 out=256 total=77149 latency=8.5s
+2026-06-29 03:07:05,639 INFO [20260615_224206_01466a] agent.tool_executor: tool terminal completed (5.59s, 101 chars)
+2026-06-29 03:07:05,898 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-203 (_call):160860 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:07:12,928 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-203 (_call):160860 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:07:12,934 INFO [20260615_224206_01466a] agent.conversation_loop: API call #43: model=claude-opus-4-8 provider=custom in=77021 out=174 total=77195 latency=7.2s
+2026-06-29 03:07:16,221 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-198 (_call):163508 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:07:16,226 INFO [20260615_224206_01466a] agent.conversation_loop: API call #4: model=claude-opus-4-8 provider=custom in=80783 out=2944 total=83727 latency=44.9s
+2026-06-29 03:07:16,507 INFO [20260615_224206_01466a] agent.tool_executor: tool skill_manage completed (0.28s, 257 chars)
+2026-06-29 03:07:17,008 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-206 (_call):163584 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:07:25,273 INFO [20260615_224206_01466a] agent.tool_executor: tool terminal completed (12.32s, 161 chars)
+2026-06-29 03:07:25,510 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-207 (_call):163816 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:07:30,148 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-206 (_call):163584 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:07:30,150 INFO [20260615_224206_01466a] agent.conversation_loop: API call #5: model=claude-opus-4-8 provider=custom in=83788 out=618 total=84406 latency=13.6s
+2026-06-29 03:07:30,457 INFO [20260615_224206_01466a] agent.tool_executor: tool skill_manage completed (0.30s, 229 chars)
+2026-06-29 03:07:30,719 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-209 (_call):160004 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:07:31,987 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-207 (_call):163816 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:07:31,990 INFO [20260615_224206_01466a] agent.conversation_loop: API call #44: model=claude-opus-4-8 provider=custom in=77187 out=126 total=77313 latency=6.7s
+2026-06-29 03:07:39,176 INFO [20260615_224206_01466a] agent.tool_executor: tool terminal completed (7.17s, 163 chars)
+2026-06-29 03:07:39,306 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-211 (_call):157416 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:07:47,098 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-211 (_call):157416 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:07:47,102 INFO [20260615_224206_01466a] agent.conversation_loop: API call #45: model=claude-opus-4-8 provider=custom in=77330 out=190 total=77520 latency=7.9s
+2026-06-29 03:07:52,457 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-209 (_call):160004 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:07:52,459 INFO [20260615_224206_01466a] agent.conversation_loop: API call #6: model=claude-opus-4-8 provider=custom in=84455 out=1629 total=86084 latency=22.0s
+2026-06-29 03:07:52,648 INFO [20260615_224206_01466a] agent.tool_executor: tool skill_manage completed (0.18s, 229 chars)
+2026-06-29 03:07:52,977 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-214 (_call):159680 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:07:54,180 INFO [20260615_224206_01466a] agent.tool_executor: tool terminal completed (7.07s, 163 chars)
+2026-06-29 03:07:54,346 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-215 (_call):160860 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:07:59,833 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-215 (_call):160860 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:07:59,838 INFO [20260615_224206_01466a] agent.conversation_loop: API call #46: model=claude-opus-4-8 provider=custom in=77450 out=77 total=77527 latency=5.6s
+2026-06-29 03:08:04,964 INFO [20260615_224206_01466a] agent.tool_executor: tool terminal completed (5.11s, 728 chars)
+2026-06-29 03:08:05,105 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-217 (_call):149144 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:08:11,616 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-217 (_call):149144 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:08:11,618 INFO [20260615_224206_01466a] agent.conversation_loop: API call #47: model=claude-opus-4-8 provider=custom in=77761 out=115 total=77876 latency=6.6s
+2026-06-29 03:08:16,379 WARNING [20260615_224206_01466a] agent.tool_executor: Tool terminal returned error (4.75s): {"output": "fatal: pathspec '.gitconfig' did not match any files", "exit_code": 128, "error": null}
+2026-06-29 03:08:16,598 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-219 (_call):155624 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:08:22,815 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-219 (_call):155624 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:08:22,818 INFO [20260615_224206_01466a] agent.conversation_loop: API call #48: model=claude-opus-4-8 provider=custom in=77889 out=106 total=77995 latency=6.4s
+2026-06-29 03:08:23,350 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-214 (_call):159680 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:08:23,353 INFO [20260615_224206_01466a] agent.conversation_loop: API call #7: model=claude-opus-4-8 provider=custom in=86156 out=1480 total=87636 latency=30.6s
+2026-06-29 03:08:23,358 WARNING [20260615_224206_01466a] agent.tool_executor: Tool patch returned error (0.00s): {"error": "Background review denied non-whitelisted tool: patch. Only memory/skill tools are allowed."}
+2026-06-29 03:08:23,568 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-221 (_call):159508 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:08:41,757 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-221 (_call):159508 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:08:41,758 INFO [20260615_224206_01466a] agent.conversation_loop: API call #8: model=claude-opus-4-8 provider=custom in=87642 out=944 total=88586 latency=18.3s
+2026-06-29 03:08:41,847 WARNING [20260615_224206_01466a] agent.tool_executor: Tool skill_manage returned error (0.09s): {"error": "file_content is required for 'write_file'.", "success": false}
+2026-06-29 03:08:42,057 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-224 (_call):153416 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:08:54,488 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-224 (_call):153416 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:08:54,489 INFO [20260615_224206_01466a] agent.conversation_loop: API call #9: model=claude-opus-4-8 provider=custom in=88597 out=624 total=89221 latency=12.6s
+2026-06-29 03:08:55,309 WARNING [20260615_224206_01466a] agent.tool_executor: Tool skill_manage returned error (0.81s): {"success": false, "error": "Could not find a match for old_string in the file\n\nDid you mean one of these sections?\n   9| ---\n  10| \n  11| # Hermes Config Sync\n  12| \n  13| Sync your Hermes con
+2026-06-29 03:08:55,439 INFO [20260615_224206_01466a] agent.tool_executor: tool terminal completed (32.60s, 356 chars)
+2026-06-29 03:08:55,496 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-226 (_call):159680 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:08:55,805 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-227 (_call):164516 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:09:02,377 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-226 (_call):159680 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:09:02,379 INFO [20260615_224206_01466a] agent.conversation_loop: API call #10: model=claude-opus-4-8 provider=custom in=89858 out=88 total=89946 latency=7.0s
+2026-06-29 03:09:02,559 INFO [20260615_224206_01466a] agent.tool_executor: tool skill_view completed (0.18s, 2251 chars)
+2026-06-29 03:09:02,725 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-229 (_call):164660 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:09:06,659 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-227 (_call):164516 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:09:06,661 INFO [20260615_224206_01466a] agent.conversation_loop: API call #49: model=claude-opus-4-8 provider=custom in=78084 out=200 total=78284 latency=11.2s
+2026-06-29 03:09:06,690 INFO [20260615_224206_01466a] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=claude-opus-4-8 api_calls=8/60 budget=8/60 tool_turns=98 last_msg_role=assistant response_len=567 session=20260615_224206_01466a
+2026-06-29 03:09:14,673 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-229 (_call):164660 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:09:14,674 INFO [20260615_224206_01466a] agent.conversation_loop: API call #11: model=claude-opus-4-8 provider=custom in=90524 out=605 total=91129 latency=12.1s
+2026-06-29 03:09:14,942 WARNING [20260615_224206_01466a] agent.tool_executor: Tool skill_manage returned error (0.27s): {"success": false, "error": "Could not find a match for old_string in the file\n\nDid you mean one of these sections?\n   9| ---\n  10| \n  11| # Hermes Config Sync\n  12| \n  13| Sync your Hermes con
+2026-06-29 03:09:15,059 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-235 (_call):156952 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:09:27,936 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-235 (_call):156952 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:09:27,938 INFO [20260615_224206_01466a] agent.conversation_loop: API call #12: model=claude-opus-4-8 provider=custom in=91877 out=658 total=92535 latency=13.0s
+2026-06-29 03:09:28,003 INFO [20260615_224206_01466a] agent.tool_executor: tool skill_manage completed (0.06s, 564 chars)
+2026-06-29 03:09:28,076 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-237 (_call):162024 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:09:34,649 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-237 (_call):162024 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:09:34,651 INFO [20260615_224206_01466a] agent.conversation_loop: API call #13: model=claude-opus-4-8 provider=custom in=92652 out=101 total=92753 latency=6.6s
+2026-06-29 03:09:34,653 INFO [20260615_224206_01466a] agent.tool_executor: tool terminal completed (0.00s, 106 chars)
+2026-06-29 03:09:34,732 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-239 (_call):157136 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:09:47,929 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-239 (_call):157136 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:09:47,930 INFO [20260615_224206_01466a] agent.conversation_loop: API call #14: model=claude-opus-4-8 provider=custom in=92762 out=378 total=93140 latency=13.3s
+2026-06-29 03:09:47,939 INFO [20260615_224206_01466a] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=claude-opus-4-8 api_calls=14/16 budget=14/16 tool_turns=104 last_msg_role=assistant response_len=983 session=20260615_224206_01466a
+2026-06-29 03:09:47,948 INFO [20260615_224206_01466a] run_agent: OpenAI client closed (agent_close, shared=True, tcp_force_closed=0) thread=bg-review:160476 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:10:07,342 INFO agent.model_metadata: Could not detect context length for model 'claude-opus-4-8' at https://api.codemax.pro/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-06-29 03:10:07,343 INFO agent.model_metadata: Using hardcoded context length 1,000,000 for model 'claude-opus-4-8' (custom endpoint, catalog match on 'claude-opus-4-8')
+2026-06-29 03:10:07,347 INFO [20260615_224206_01466a] agent.turn_context: conversation turn: session=20260615_224206_01466a model=claude-opus-4-8 provider=custom platform=tui history=220 msg='Change Git email to jadonandcompany.in@gmail.com  it is the original one used in...'
+2026-06-29 03:10:07,521 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-242 (_call):163508 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:10:13,323 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-242 (_call):163508 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:10:13,327 INFO [20260615_224206_01466a] agent.conversation_loop: API call #50: model=claude-opus-4-8 provider=custom in=78270 out=82 total=78352 latency=5.9s
+2026-06-29 03:10:18,330 INFO [20260615_224206_01466a] agent.tool_executor: tool terminal completed (4.99s, 73 chars)
+2026-06-29 03:10:18,496 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-244 (_call):159600 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:10:25,187 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-244 (_call):159600 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:10:25,189 INFO [20260615_224206_01466a] agent.conversation_loop: API call #51: model=claude-opus-4-8 provider=custom in=78352 out=116 total=78468 latency=6.8s
+2026-06-29 03:10:55,657 INFO [20260615_224206_01466a] agent.tool_executor: tool terminal completed (30.16s, 398 chars)
+2026-06-29 03:10:55,780 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-246 (_call):165336 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:11:01,535 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-246 (_call):165336 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:11:01,538 INFO [20260615_224206_01466a] agent.conversation_loop: API call #52: model=claude-opus-4-8 provider=custom in=78574 out=94 total=78668 latency=5.8s
+2026-06-29 03:11:01,572 INFO [20260615_224206_01466a] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=claude-opus-4-8 api_calls=3/60 budget=3/60 tool_turns=100 last_msg_role=assistant response_len=247 session=20260615_224206_01466a
+2026-06-29 03:17:04,483 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-06-29 03:17:04,549 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-06-29 03:17:04,579 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-06-29 03:17:05,450 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-06-29 03:17:05,465 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-06-29 03:17:05,465 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-06-29 03:17:05,465 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-06-29 03:17:05,481 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-06-29 03:17:05,481 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-06-29 03:17:05,481 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-06-29 03:17:05,512 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-06-29 03:17:05,512 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-06-29 03:17:05,528 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-06-29 03:17:05,528 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-06-29 03:17:05,544 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-06-29 03:17:05,544 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-06-29 03:17:05,559 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-06-29 03:17:05,559 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-06-29 03:17:05,559 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-06-29 03:17:05,575 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-06-29 03:17:12,528 INFO hermes_cli.plugins: Plugin discovery complete: 51 found, 44 enabled
+2026-06-29 03:17:13,975 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-06-29 03:17:14,705 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-06-29 03:17:15,678 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-06-29 03:17:15,695 INFO cron.scheduler_provider: In-process cron scheduler started (interval=60s)
+2026-06-29 03:17:17,443 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:54441
+2026-06-29 03:17:28,708 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:17:31,351 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:17:34,522 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:17:38,690 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:17:46,883 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:18:10,394 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:18:11,483 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:18:13,594 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:18:14,900 INFO hermes_cli.nous_auth_keepalive: Nous auth keepalive requires re-login: No access token found for Nous Portal login.
+2026-06-29 03:18:17,729 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:11,595 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:12,790 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:14,961 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:41,409 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:42,529 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:44,634 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:53,053 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:54,165 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:04,135 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:05,243 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:24,042 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:25,138 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:36,627 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:37,754 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:46,213 INFO run_agent: Loaded environment variables from C:\Users\JADON'S\AppData\Local\hermes\.env
+2026-06-29 03:21:48,969 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:50,719 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=Thread-7 (_build):166612 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:21:51,329 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-06-29 03:21:51,379 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-06-29 03:21:51,699 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (claude-opus-4-8)
+2026-06-29 03:21:51,747 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 03:21:52,657 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 03:21:52,669 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 03:21:52,678 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 03:21:52,948 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (claude-opus-4-8)
+2026-06-29 03:21:52,987 WARNING tools.registry: check_fn check_web_api_key returned False; dependent tools will be unavailable this turn
+2026-06-29 03:21:53,999 INFO agent.model_metadata: Could not detect context length for model 'claude-opus-4-8' at https://api.codemax.pro/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-06-29 03:21:53,999 INFO agent.model_metadata: Using hardcoded context length 1,000,000 for model 'claude-opus-4-8' (custom endpoint, catalog match on 'claude-opus-4-8')
+2026-06-29 03:21:54,508 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:57,094 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:57,124 INFO [20260629_032145_1abc86] agent.turn_context: conversation turn: session=20260629_032145_1abc86 model=claude-opus-4-8 provider=custom platform=tui history=0 msg="Importing merged sessions...\r Hermes dir: C:\\Users\\JADON'S\\AppData\\Local\\hermes\r..."
+2026-06-29 03:21:57,348 WARNING cli: Failed to initialize SessionDB — session will NOT be indexed for search: no such column: expires_at
+2026-06-29 03:22:03,869 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-27 (_call):166144 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:22:13,222 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-27 (_call):166144 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:22:13,228 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #1: model=claude-opus-4-8 provider=custom in=0 out=323 total=323 latency=9.5s
+2026-06-29 03:22:13,259 INFO [20260629_032145_1abc86] tools.terminal_tool: Creating new local environment for task default...
+2026-06-29 03:22:24,220 INFO [20260629_032145_1abc86] tools.environments.base: Session snapshot created (session=e6e8a021f023, cwd=C:\Users\JADON'S)
+2026-06-29 03:22:24,220 INFO [20260629_032145_1abc86] tools.terminal_tool: local environment ready for task default
+2026-06-29 03:22:30,910 INFO [20260629_032145_1abc86] agent.tool_executor: tool terminal completed (17.66s, 832 chars)
+2026-06-29 03:22:37,888 INFO [20260629_032145_1abc86] agent.tool_executor: tool terminal completed (5.96s, 145 chars)
+2026-06-29 03:22:38,009 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-32 (_call):161344 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:22:44,667 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-32 (_call):161344 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:22:44,670 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #2: model=claude-opus-4-8 provider=custom in=0 out=410 total=410 latency=6.8s
+2026-06-29 03:22:57,251 INFO [20260629_032145_1abc86] agent.tool_executor: tool terminal completed (12.57s, 2103 chars)
+2026-06-29 03:23:15,897 WARNING [20260629_032145_1abc86] agent.tool_executor: Tool terminal returned error (17.56s): {"output": "total 8\ndrwxr-xr-x 1 JADON'S 197121 0 Jun 14 10:54 .\ndrwxr-xr-x 1 JADON'S 197121 0 Jun 29 03:21 ..\n-rw-r--r-- 1 JADON'S 197121    1880 Jun 29 01:13 C:\\Users\\JADON'S\\AppData\\Local\\h
+2026-06-29 03:23:16,337 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-35 (_call):163816 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:23:41,164 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-35 (_call):163816 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:23:41,168 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #3: model=claude-opus-4-8 provider=custom in=0 out=267 total=267 latency=25.1s
+2026-06-29 03:24:00,529 INFO [20260629_032145_1abc86] agent.tool_executor: tool terminal completed (19.36s, 2804 chars)
+2026-06-29 03:24:08,649 INFO [20260629_032145_1abc86] agent.tool_executor: tool terminal completed (7.10s, 1849 chars)
+2026-06-29 03:24:08,794 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-38 (_call):166840 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:24:13,795 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-38 (_call):166840 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:24:13,799 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #4: model=claude-opus-4-8 provider=custom in=0 out=197 total=197 latency=5.1s
+2026-06-29 03:24:30,751 INFO [20260629_032145_1abc86] agent.tool_executor: tool read_file completed (16.94s, 1942 chars)
+2026-06-29 03:24:52,379 WARNING [20260629_032145_1abc86] agent.tool_executor: Tool terminal returned error (20.61s): {"output": "", "exit_code": 1, "error": null, "exit_code_meaning": "Some directories were inaccessible (partial results may still be valid)"}
+2026-06-29 03:24:52,500 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-44 (_call):166792 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:24:56,492 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-44 (_call):166792 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:24:56,497 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #5: model=claude-opus-4-8 provider=custom in=0 out=107 total=107 latency=4.1s
+2026-06-29 03:25:00,281 INFO [20260629_032145_1abc86] agent.tool_executor: tool terminal completed (3.78s, 234 chars)
+2026-06-29 03:25:14,545 INFO [20260629_032145_1abc86] agent.tool_executor: tool read_file completed (13.25s, 9136 chars)
+2026-06-29 03:25:14,646 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-50 (_call):160604 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:25:29,847 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-50 (_call):160604 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:25:29,850 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #6: model=claude-opus-4-8 provider=custom in=0 out=831 total=831 latency=15.3s
+2026-06-29 03:25:44,490 INFO [20260629_032145_1abc86] agent.tool_executor: tool read_file completed (14.63s, 2784 chars)
+2026-06-29 03:25:54,098 INFO [20260629_032145_1abc86] agent.tool_executor: tool terminal completed (8.59s, 1623 chars)
+2026-06-29 03:25:54,247 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-56 (_call):165004 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:26:15,170 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-56 (_call):165004 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:26:15,175 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #7: model=claude-opus-4-8 provider=custom in=0 out=1478 total=1478 latency=21.1s
+2026-06-29 03:26:24,428 INFO [20260629_032145_1abc86] agent.tool_executor: tool terminal completed (9.25s, 1940 chars)
+2026-06-29 03:26:35,425 INFO [20260629_032145_1abc86] agent.tool_executor: tool terminal completed (9.98s, 104 chars)
+2026-06-29 03:26:35,536 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-59 (_call):166508 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:26:40,231 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-59 (_call):166508 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:26:40,236 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #8: model=claude-opus-4-8 provider=custom in=0 out=253 total=253 latency=4.8s
+2026-06-29 03:29:43,597 WARNING [20260629_032145_1abc86] agent.tool_executor: Tool terminal returned error (183.35s): {"output": "./hermes-agent/hermes_cli/kanban_db.py:    #      all, so RENAME raises OperationalError: no such column (the crash\n./hermes-agent/hermes_state.py:            if \"no such table\" in msg 
+2026-06-29 03:30:04,509 INFO [20260629_032145_1abc86] agent.tool_executor: tool terminal completed (19.85s, 931 chars)
+2026-06-29 03:30:04,918 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-62 (_call):166524 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:30:22,211 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-62 (_call):166524 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:30:22,242 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #9: model=claude-opus-4-8 provider=custom in=0 out=401 total=401 latency=17.7s
+2026-06-29 03:30:47,021 INFO [20260629_032145_1abc86] agent.tool_executor: tool read_file completed (24.30s, 2230 chars)
+2026-06-29 03:30:53,189 INFO [20260629_032145_1abc86] agent.tool_executor: tool terminal completed (4.58s, 643 chars)
+2026-06-29 03:30:53,299 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-68 (_call):166880 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:31:01,474 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-68 (_call):166880 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:31:01,479 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #10: model=claude-opus-4-8 provider=custom in=0 out=715 total=715 latency=8.3s
+2026-06-29 03:31:08,183 INFO [20260629_032145_1abc86] agent.tool_executor: tool terminal completed (6.70s, 1312 chars)
+2026-06-29 03:31:13,914 INFO [20260629_032145_1abc86] agent.tool_executor: tool terminal completed (4.72s, 1739 chars)
+2026-06-29 03:31:14,055 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-71 (_call):165108 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:31:32,578 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-71 (_call):165108 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:31:32,580 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #11: model=claude-opus-4-8 provider=custom in=0 out=862 total=862 latency=18.6s
+2026-06-29 03:31:39,559 WARNING hermes.lint.lsp: lsp[pyright] spawn/initialize failed for C:\Users\JADON'S\AppData\Local\hermes: OSError: [WinError 193] %1 is not a valid Win32 application
+2026-06-29 03:32:10,789 INFO [20260629_032145_1abc86] agent.tool_executor: tool patch completed (38.20s, 2117 chars)
+2026-06-29 03:32:10,877 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-79 (_call):166208 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:32:19,853 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-79 (_call):166208 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:32:19,857 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #12: model=claude-opus-4-8 provider=custom in=0 out=699 total=699 latency=9.0s
+2026-06-29 03:33:06,317 INFO [20260629_032145_1abc86] agent.tool_executor: tool patch completed (46.45s, 3528 chars)
+2026-06-29 03:33:06,436 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-87 (_call):165176 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:33:10,972 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-87 (_call):165176 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:33:10,974 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #13: model=claude-opus-4-8 provider=custom in=0 out=117 total=117 latency=4.6s
+2026-06-29 03:33:26,323 INFO [20260629_032145_1abc86] agent.tool_executor: tool read_file completed (15.34s, 3391 chars)
+2026-06-29 03:33:26,429 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-92 (_call):156256 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:33:37,423 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-92 (_call):156256 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:33:37,428 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #14: model=claude-opus-4-8 provider=custom in=0 out=738 total=738 latency=11.1s
+2026-06-29 03:34:24,709 INFO [20260629_032145_1abc86] agent.tool_executor: tool patch completed (47.27s, 3176 chars)
+2026-06-29 03:34:24,808 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-100 (_call):164708 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:34:42,148 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-100 (_call):164708 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:34:42,150 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #15: model=claude-opus-4-8 provider=custom in=0 out=1252 total=1252 latency=17.4s
+2026-06-29 03:34:52,405 INFO [20260629_032145_1abc86] agent.tool_executor: tool terminal completed (10.24s, 294 chars)
+2026-06-29 03:34:52,538 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-102 (_call):165152 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:34:59,289 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-102 (_call):165152 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:34:59,297 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #16: model=claude-opus-4-8 provider=custom in=0 out=384 total=384 latency=6.9s
+2026-06-29 03:35:04,350 INFO [20260629_032145_1abc86] agent.tool_executor: tool terminal completed (5.04s, 1687 chars)
+2026-06-29 03:35:04,587 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-104 (_call):161100 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:35:11,983 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-104 (_call):161100 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:35:11,987 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #17: model=claude-opus-4-8 provider=custom in=0 out=191 total=191 latency=7.6s
+2026-06-29 03:35:16,029 INFO [20260629_032145_1abc86] agent.tool_executor: tool terminal completed (4.04s, 466 chars)
+2026-06-29 03:35:16,214 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-106 (_call):159440 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:35:22,428 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-106 (_call):159440 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:35:22,431 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #18: model=claude-opus-4-8 provider=custom in=0 out=238 total=238 latency=6.4s
+2026-06-29 03:35:29,454 INFO [20260629_032145_1abc86] agent.tool_executor: tool terminal completed (7.01s, 304 chars)
+2026-06-29 03:35:29,553 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-108 (_call):161500 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:35:36,423 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-108 (_call):161500 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:35:36,426 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #19: model=claude-opus-4-8 provider=custom in=0 out=154 total=154 latency=7.0s
+2026-06-29 03:35:42,210 WARNING [20260629_032145_1abc86] agent.tool_executor: Tool terminal returned error (5.45s): {"output": "rm: cannot remove 'state.db-shm': Device or resource busy\nrm: cannot remove 'state.db-wal': Device or resource busy", "exit_code": 1, "error": null}
+2026-06-29 03:35:42,368 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-110 (_call):166364 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:35:46,709 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-110 (_call):166364 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:35:46,718 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #20: model=claude-opus-4-8 provider=custom in=0 out=211 total=211 latency=4.5s
+2026-06-29 03:35:53,650 INFO [20260629_032145_1abc86] agent.tool_executor: tool terminal completed (6.91s, 300 chars)
+2026-06-29 03:35:53,754 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-112 (_call):165124 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:36:00,967 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-112 (_call):165124 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:36:00,969 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #21: model=claude-opus-4-8 provider=custom in=0 out=597 total=597 latency=7.3s
+2026-06-29 03:36:00,996 INFO [20260629_032145_1abc86] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=claude-opus-4-8 api_calls=21/60 budget=21/60 tool_turns=20 last_msg_role=assistant response_len=1393 session=20260629_032145_1abc86
+2026-06-29 03:36:01,455 INFO agent.auxiliary_client: Auxiliary auto-detect: using main provider custom (claude-opus-4-8)
+2026-06-29 03:36:01,457 INFO agent.auxiliary_client: Auxiliary title_generation: using auto (claude-opus-4-8) at https://api.codemax.pro/v1/
+2026-06-29 03:36:01,494 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=bg-review:153520 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:36:01,928 INFO agent.model_metadata: Could not detect context length for model 'claude-opus-4-8' at https://api.codemax.pro/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-06-29 03:36:01,933 INFO agent.model_metadata: Using hardcoded context length 1,000,000 for model 'claude-opus-4-8' (custom endpoint, catalog match on 'claude-opus-4-8')
+2026-06-29 03:36:02,012 INFO [20260629_032145_1abc86] agent.turn_context: conversation turn: session=20260629_032145_1abc86 model=claude-opus-4-8 provider=custom platform=tui history=52 msg='Review the conversation above and update the skill library. Be ACTIVE — most ses...'
+2026-06-29 03:36:02,147 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-118 (_call):159208 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:36:20,102 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-118 (_call):159208 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:36:20,104 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #1: model=claude-opus-4-8 provider=custom in=0 out=343 total=343 latency=18.1s
+2026-06-29 03:36:20,328 INFO [20260629_032145_1abc86] agent.tool_executor: tool skill_view completed (0.22s, 6150 chars)
+2026-06-29 03:36:20,449 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-120 (_call):164284 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:36:32,274 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-120 (_call):164284 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:36:32,276 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #2: model=claude-opus-4-8 provider=custom in=0 out=188 total=188 latency=11.9s
+2026-06-29 03:36:32,480 INFO agent.tool_executor: tool skill_view completed (0.20s, 12878 chars)
+2026-06-29 03:36:33,508 INFO agent.tool_executor: tool skill_view completed (1.23s, 3766 chars)
+2026-06-29 03:36:33,616 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-122 (_call):164228 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:36:50,946 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-122 (_call):164228 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:36:50,948 INFO [20260629_032145_1abc86] agent.conversation_loop: API call #3: model=claude-opus-4-8 provider=custom in=0 out=1066 total=1066 latency=17.4s
+2026-06-29 03:36:51,595 WARNING [20260629_032145_1abc86] agent.tool_executor: Tool skill_manage returned error (0.64s): {"success": false, "error": "Could not find a match for old_string in the file\n\nDid you mean one of these sections?\n  58| Thumbs.db\n  59| \n  60| # Hermes installer\n  61| desktop-build-stamp.json
+2026-06-29 03:36:51,664 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-124 (_call):158992 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:36:56,796 INFO tui_gateway.ws: ws closed peer=127.0.0.1:54441 reason=client_disconnect(code=1006,reason=) messages=610 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=1
+2026-06-29 03:37:57,126 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-06-29 03:37:57,194 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-06-29 03:37:57,207 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-06-29 03:37:58,758 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-06-29 03:37:58,766 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-06-29 03:37:58,770 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-06-29 03:37:58,777 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-06-29 03:37:58,779 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-06-29 03:37:58,784 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-06-29 03:37:58,787 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-06-29 03:37:58,823 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-06-29 03:37:58,827 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-06-29 03:37:58,837 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-06-29 03:37:58,861 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-06-29 03:37:58,869 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-06-29 03:37:58,880 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-06-29 03:37:58,888 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-06-29 03:37:58,896 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-06-29 03:37:58,909 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-06-29 03:37:58,916 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-06-29 03:38:08,959 INFO hermes_cli.plugins: Plugin discovery complete: 51 found, 44 enabled
+2026-06-29 03:38:10,531 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-06-29 03:38:11,209 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-06-29 03:38:12,226 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-06-29 03:38:12,235 INFO cron.scheduler_provider: In-process cron scheduler started (interval=60s)
+2026-06-29 03:38:14,937 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:56949
+2026-06-29 03:38:25,302 INFO agent.model_metadata: Could not detect context length for model 'claude-opus-4-8' at https://api.codemax.pro/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-06-29 03:38:25,302 INFO agent.model_metadata: Using hardcoded context length 1,000,000 for model 'claude-opus-4-8' (custom endpoint, catalog match on 'claude-opus-4-8')
+2026-06-29 03:38:35,768 INFO run_agent: Loaded environment variables from C:\Users\JADON'S\AppData\Local\hermes\.env
+2026-06-29 03:38:39,333 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=Thread-5 (_build):166444 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:38:39,933 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-06-29 03:38:39,995 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-06-29 03:38:40,213 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (claude-opus-4-8)
+2026-06-29 03:38:40,244 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 03:38:40,905 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 03:38:40,915 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 03:38:40,925 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 03:38:41,130 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (claude-opus-4-8)
+2026-06-29 03:38:41,172 WARNING tools.registry: check_fn check_web_api_key returned False; dependent tools will be unavailable this turn
+2026-06-29 03:38:41,694 INFO agent.model_metadata: Could not detect context length for model 'claude-opus-4-8' at https://api.codemax.pro/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-06-29 03:38:41,695 INFO agent.model_metadata: Using hardcoded context length 1,000,000 for model 'claude-opus-4-8' (custom endpoint, catalog match on 'claude-opus-4-8')
+2026-06-29 03:39:04,745 INFO [20260615_224206_01466a] agent.turn_context: conversation turn: session=20260615_224206_01466a model=claude-opus-4-8 provider=custom platform=tui history=226 msg='Which Files i need to Paste in other desktop Hermus Agent folder'
+2026-06-29 03:39:04,897 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-21 (_call):164896 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:39:11,602 INFO hermes_cli.nous_auth_keepalive: Nous auth keepalive requires re-login: No access token found for Nous Portal login.
+2026-06-29 03:39:22,600 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-21 (_call):164896 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:39:22,608 INFO [20260615_224206_01466a] agent.conversation_loop: API call #1: model=claude-opus-4-8 provider=custom in=78665 out=508 total=79173 latency=17.8s
+2026-06-29 03:39:22,657 INFO [20260615_224206_01466a] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=claude-opus-4-8 api_calls=1/60 budget=1/60 tool_turns=100 last_msg_role=assistant response_len=1253 session=20260615_224206_01466a
+2026-06-29 03:41:29,478 INFO [20260615_224206_01466a] agent.turn_context: conversation turn: session=20260615_224206_01466a model=claude-opus-4-8 provider=custom platform=tui history=228 msg='what is the uuse of sync_biderectional then?'
+2026-06-29 03:41:29,604 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-28 (_call):166752 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:41:39,365 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-28 (_call):166752 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:41:39,369 INFO [20260615_224206_01466a] agent.conversation_loop: API call #2: model=claude-opus-4-8 provider=custom in=79034 out=316 total=79350 latency=9.8s
+2026-06-29 03:41:39,409 INFO [20260615_224206_01466a] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=claude-opus-4-8 api_calls=1/60 budget=1/60 tool_turns=100 last_msg_role=assistant response_len=975 session=20260615_224206_01466a
+2026-06-29 03:47:16,451 INFO [20260615_224206_01466a] agent.turn_context: conversation turn: session=20260615_224206_01466a model=claude-opus-4-8 provider=custom platform=tui history=230 msg="It didn't worked showed error  Fatal : refusing to merge unrelated histories, af..."
+2026-06-29 03:47:16,558 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-35 (_call):165140 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:47:29,958 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-35 (_call):165140 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:47:29,960 INFO [20260615_224206_01466a] agent.conversation_loop: API call #3: model=claude-opus-4-8 provider=custom in=79295 out=343 total=79638 latency=13.5s
+2026-06-29 03:47:30,613 INFO [20260615_224206_01466a] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=claude-opus-4-8 api_calls=1/60 budget=1/60 tool_turns=100 last_msg_role=assistant response_len=691 session=20260615_224206_01466a
+2026-06-29 03:53:12,678 INFO [20260615_224206_01466a] agent.turn_context: conversation turn: session=20260615_224206_01466a model=claude-opus-4-8 provider=custom platform=tui history=232 msg='No showing error your local changes to following file would be overwritten by me...'
+2026-06-29 03:53:12,773 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-42 (_call):166908 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:53:20,909 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-42 (_call):166908 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:53:20,914 INFO [20260615_224206_01466a] agent.conversation_loop: API call #4: model=claude-opus-4-8 provider=custom in=79528 out=200 total=79728 latency=8.2s
+2026-06-29 03:53:21,557 INFO [20260615_224206_01466a] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=claude-opus-4-8 api_calls=1/60 budget=1/60 tool_turns=100 last_msg_role=assistant response_len=594 session=20260615_224206_01466a
+2026-06-29 03:54:50,998 INFO [20260615_224206_01466a] agent.turn_context: conversation turn: session=20260615_224206_01466a model=claude-opus-4-8 provider=custom platform=tui history=234 msg='I am using gitbash there and rd is command not found'
+2026-06-29 03:54:51,133 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-49 (_call):163056 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:54:57,599 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-49 (_call):163056 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:54:57,604 INFO [20260615_224206_01466a] agent.conversation_loop: API call #5: model=claude-opus-4-8 provider=custom in=79698 out=132 total=79830 latency=6.6s
+2026-06-29 03:54:57,638 INFO [20260615_224206_01466a] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=claude-opus-4-8 api_calls=1/60 budget=1/60 tool_turns=100 last_msg_role=assistant response_len=343 session=20260615_224206_01466a
+2026-06-29 03:59:13,578 INFO [20260615_224206_01466a] agent.turn_context: conversation turn: session=20260615_224206_01466a model=claude-opus-4-8 provider=custom platform=tui history=236 msg="Still not Worked And hermes in other desktop don't now even have state.db file a..."
+2026-06-29 03:59:13,680 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-56 (_call):165228 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:59:22,999 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-56 (_call):165228 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 03:59:23,004 INFO [20260615_224206_01466a] agent.conversation_loop: API call #6: model=claude-opus-4-8 provider=custom in=79820 out=373 total=80193 latency=9.4s
+2026-06-29 03:59:23,443 INFO [20260615_224206_01466a] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=claude-opus-4-8 api_calls=1/60 budget=1/60 tool_turns=100 last_msg_role=assistant response_len=863 session=20260615_224206_01466a
+2026-06-29 04:01:08,652 INFO [20260615_224206_01466a] agent.turn_context: conversation turn: session=20260615_224206_01466a model=claude-opus-4-8 provider=custom platform=tui history=238 msg='~/AppData/Local/hermes'
+2026-06-29 04:01:08,737 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-63 (_call):165252 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 04:01:13,814 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-63 (_call):165252 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 04:01:13,817 INFO [20260615_224206_01466a] agent.conversation_loop: API call #7: model=claude-opus-4-8 provider=custom in=80097 out=58 total=80155 latency=5.1s
+2026-06-29 04:01:13,858 INFO [20260615_224206_01466a] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=claude-opus-4-8 api_calls=1/60 budget=1/60 tool_turns=100 last_msg_role=assistant response_len=116 session=20260615_224206_01466a
+2026-06-29 04:01:14,793 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=bg-review:166088 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 04:01:15,288 INFO agent.model_metadata: Could not detect context length for model 'claude-opus-4-8' at https://api.codemax.pro/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-06-29 04:01:15,294 INFO agent.model_metadata: Using hardcoded context length 1,000,000 for model 'claude-opus-4-8' (custom endpoint, catalog match on 'claude-opus-4-8')
+2026-06-29 04:01:15,326 INFO [20260615_224206_01466a] agent.turn_context: conversation turn: session=20260615_224206_01466a model=claude-opus-4-8 provider=custom platform=tui history=240 msg='Review the conversation above and consider saving to memory if appropriate.  Foc...'
+2026-06-29 04:01:15,537 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-69 (_call):135676 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 04:01:32,559 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-69 (_call):135676 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 04:01:32,561 INFO [20260615_224206_01466a] agent.conversation_loop: API call #1: model=claude-opus-4-8 provider=custom in=80652 out=415 total=81067 latency=17.2s
+2026-06-29 04:01:32,584 INFO [20260615_224206_01466a] agent.tool_executor: tool memory completed (0.01s, 198 chars)
+2026-06-29 04:01:32,660 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-71 (_call):164868 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 04:01:39,686 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-71 (_call):164868 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 04:01:39,688 INFO [20260615_224206_01466a] agent.conversation_loop: API call #2: model=claude-opus-4-8 provider=custom in=80482 out=114 total=80596 latency=7.1s
+2026-06-29 04:01:39,697 INFO [20260615_224206_01466a] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=claude-opus-4-8 api_calls=2/16 budget=2/16 tool_turns=101 last_msg_role=assistant response_len=240 session=20260615_224206_01466a
+2026-06-29 04:01:39,706 INFO [20260615_224206_01466a] run_agent: OpenAI client closed (agent_close, shared=True, tcp_force_closed=0) thread=bg-review:166088 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 04:01:54,494 INFO [20260615_224206_01466a] agent.turn_context: conversation turn: session=20260615_224206_01466a model=claude-opus-4-8 provider=custom platform=tui history=240 msg='yes'
+2026-06-29 04:01:54,613 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-74 (_call):162928 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 04:02:01,055 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-74 (_call):162928 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 04:02:01,058 INFO [20260615_224206_01466a] agent.conversation_loop: API call #8: model=claude-opus-4-8 provider=custom in=80144 out=91 total=80235 latency=6.5s
+2026-06-29 04:02:01,100 INFO [20260615_224206_01466a] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=claude-opus-4-8 api_calls=1/60 budget=1/60 tool_turns=100 last_msg_role=assistant response_len=103 session=20260615_224206_01466a
+2026-06-29 04:03:12,797 INFO [20260615_224206_01466a] agent.turn_context: conversation turn: session=20260615_224206_01466a model=claude-opus-4-8 provider=custom platform=tui history=242 msg="Hi JadonInfotech! you've successfully authenticated, but Github does not provide..."
+2026-06-29 04:03:12,889 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-81 (_call):134128 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 04:03:18,688 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-81 (_call):134128 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 04:03:18,691 INFO [20260615_224206_01466a] agent.conversation_loop: API call #9: model=claude-opus-4-8 provider=custom in=80200 out=116 total=80316 latency=5.9s
+2026-06-29 04:03:18,737 INFO [20260615_224206_01466a] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=claude-opus-4-8 api_calls=1/60 budget=1/60 tool_turns=100 last_msg_role=assistant response_len=338 session=20260615_224206_01466a
+2026-06-29 04:07:06,619 INFO [20260615_224206_01466a] agent.turn_context: conversation turn: session=20260615_224206_01466a model=claude-opus-4-8 provider=custom platform=tui history=244 msg="on running git clone gave error of Fatal: destination path 'herme-config' alread..."
+2026-06-29 04:07:06,728 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-88 (_call):166392 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 04:07:26,205 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-88 (_call):166392 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 04:07:26,208 INFO [20260615_224206_01466a] agent.conversation_loop: API call #10: model=claude-opus-4-8 provider=custom in=0 out=175 total=175 latency=19.5s
+2026-06-29 04:07:26,574 INFO [20260615_224206_01466a] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=claude-opus-4-8 api_calls=1/60 budget=1/60 tool_turns=100 last_msg_role=assistant response_len=453 session=20260615_224206_01466a
+2026-06-29 04:13:55,300 INFO [20260615_224206_01466a] agent.turn_context: conversation turn: session=20260615_224206_01466a model=claude-opus-4-8 provider=custom platform=tui history=246 msg='After All And Running ls -la  total 50\r drwxr-xr-x 1 ZADON 197121     0 Jun 29 0...'
+2026-06-29 04:13:55,438 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-95 (_call):167676 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 04:14:02,091 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-95 (_call):167676 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 04:14:02,096 INFO [20260615_224206_01466a] agent.conversation_loop: API call #11: model=claude-opus-4-8 provider=custom in=0 out=189 total=189 latency=6.7s
+2026-06-29 04:14:02,509 INFO [20260615_224206_01466a] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=claude-opus-4-8 api_calls=1/60 budget=1/60 tool_turns=100 last_msg_role=assistant response_len=372 session=20260615_224206_01466a
+2026-06-29 04:17:02,707 INFO [20260615_224206_01466a] agent.turn_context: conversation turn: session=20260615_224206_01466a model=claude-opus-4-8 provider=custom platform=tui history=248 msg='total 2458\r drwxr-xr-x 1 ZADON 197121       0 Jun 29 04:16 ./\r drwxr-xr-x 1 ZADO...'
+2026-06-29 04:17:02,899 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-102 (_call):164956 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 04:17:30,254 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-102 (_call):164956 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 04:17:30,256 INFO [20260615_224206_01466a] agent.conversation_loop: API call #12: model=claude-opus-4-8 provider=custom in=0 out=234 total=234 latency=27.5s
+2026-06-29 04:17:30,279 INFO [20260615_224206_01466a] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=claude-opus-4-8 api_calls=1/60 budget=1/60 tool_turns=100 last_msg_role=assistant response_len=392 session=20260615_224206_01466a
+2026-06-29 04:26:32,649 INFO [20260615_224206_01466a] agent.turn_context: conversation turn: session=20260615_224206_01466a model=claude-opus-4-8 provider=custom platform=tui history=250 msg='Listening to you led , that when you said to run rm command, it formated full he...'
+2026-06-29 04:26:32,738 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-109 (_call):167244 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 04:27:06,111 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-109 (_call):167244 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 04:27:06,114 INFO [20260615_224206_01466a] agent.conversation_loop: API call #13: model=claude-opus-4-8 provider=custom in=0 out=360 total=360 latency=33.4s
+2026-06-29 04:27:06,460 INFO [20260615_224206_01466a] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=claude-opus-4-8 api_calls=1/60 budget=1/60 tool_turns=100 last_msg_role=assistant response_len=879 session=20260615_224206_01466a
+2026-06-29 05:20:22,356 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-06-29 05:20:22,454 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-06-29 05:20:22,464 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-06-29 05:20:23,303 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-06-29 05:20:23,303 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-06-29 05:20:23,303 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-06-29 05:20:23,318 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-06-29 05:20:23,318 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-06-29 05:20:23,318 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-06-29 05:20:23,318 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-06-29 05:20:23,353 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-06-29 05:20:23,368 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-06-29 05:20:23,372 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-06-29 05:20:23,384 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-06-29 05:20:23,393 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-06-29 05:20:23,403 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-06-29 05:20:23,403 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-06-29 05:20:23,412 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-06-29 05:20:23,423 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-06-29 05:20:23,433 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-06-29 05:20:29,665 INFO hermes_cli.plugins: Plugin discovery complete: 51 found, 44 enabled
+2026-06-29 05:20:30,655 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-06-29 05:20:31,283 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-06-29 05:20:32,193 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-06-29 05:20:32,209 INFO cron.scheduler_provider: In-process cron scheduler started (interval=60s)
+2026-06-29 05:20:34,158 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:63106
+2026-06-29 05:20:46,552 INFO agent.model_metadata: Could not detect context length for model 'claude-opus-4-8' at https://api.codemax.pro/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-06-29 05:20:46,552 INFO agent.model_metadata: Using hardcoded context length 1,000,000 for model 'claude-opus-4-8' (custom endpoint, catalog match on 'claude-opus-4-8')
+2026-06-29 05:20:58,707 INFO agent.model_metadata: Could not detect context length for model 'claude-opus-4-8' at https://api.codemax.pro/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-06-29 05:20:58,707 INFO agent.model_metadata: Using hardcoded context length 1,000,000 for model 'claude-opus-4-8' (custom endpoint, catalog match on 'claude-opus-4-8')
+2026-06-29 05:22:13,868 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-06-29 05:22:13,917 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-06-29 05:22:13,923 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-06-29 05:22:14,773 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-06-29 05:22:14,773 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-06-29 05:22:14,780 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-06-29 05:22:14,784 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-06-29 05:22:14,784 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-06-29 05:22:14,784 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-06-29 05:22:14,796 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-06-29 05:22:14,833 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-06-29 05:22:14,833 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-06-29 05:22:14,853 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-06-29 05:22:14,853 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-06-29 05:22:14,853 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-06-29 05:22:14,868 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-06-29 05:22:14,868 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-06-29 05:22:14,868 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-06-29 05:22:14,884 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-06-29 05:22:14,884 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-06-29 05:22:21,063 INFO hermes_cli.plugins: Plugin discovery complete: 51 found, 44 enabled
+2026-06-29 05:22:22,194 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-06-29 05:22:22,885 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-06-29 05:22:23,252 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-06-29 05:22:23,284 INFO cron.scheduler_provider: In-process cron scheduler started (interval=60s)
+2026-06-29 05:22:26,195 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:63459
+2026-06-29 05:22:36,241 INFO agent.model_metadata: Could not detect context length for model 'claude-opus-4-8' at https://api.codemax.pro/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-06-29 05:22:36,246 INFO agent.model_metadata: Using hardcoded context length 1,000,000 for model 'claude-opus-4-8' (custom endpoint, catalog match on 'claude-opus-4-8')
+2026-06-29 05:23:22,986 INFO hermes_cli.nous_auth_keepalive: Nous auth keepalive requires re-login: No access token found for Nous Portal login.
+2026-06-29 05:24:15,313 INFO run_agent: Loaded environment variables from C:\Users\JADON'S\AppData\Local\hermes\.env
+2026-06-29 05:24:19,825 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=Thread-7 (_build):148100 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:24:20,922 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-06-29 05:24:21,046 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-06-29 05:24:21,455 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (claude-opus-4-8)
+2026-06-29 05:24:21,505 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 05:24:22,795 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 05:24:22,816 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 05:24:22,845 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 05:24:23,273 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (claude-opus-4-8)
+2026-06-29 05:24:23,345 WARNING tools.registry: check_fn check_web_api_key returned False; dependent tools will be unavailable this turn
+2026-06-29 05:24:24,034 INFO agent.model_metadata: Could not detect context length for model 'claude-opus-4-8' at https://api.codemax.pro/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-06-29 05:24:24,034 INFO agent.model_metadata: Using hardcoded context length 1,000,000 for model 'claude-opus-4-8' (custom endpoint, catalog match on 'claude-opus-4-8')
+2026-06-29 05:24:28,314 INFO [20260629_052414_e1a23a] agent.turn_context: conversation turn: session=20260629_052414_e1a23a model=claude-opus-4-8 provider=custom platform=tui history=0 msg="Importing merged sessions...\r Hermes dir: C:\\Users\\JADON'S\\AppData\\Local\\hermes\r..."
+2026-06-29 05:24:32,821 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-27 (_call):157012 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:24:44,994 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-27 (_call):157012 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:24:44,994 INFO [20260629_052414_e1a23a] agent.conversation_loop: API call #1: model=claude-opus-4-8 provider=custom in=0 out=305 total=305 latency=12.3s
+2026-06-29 05:24:45,044 INFO [20260629_052414_e1a23a] tools.file_tools: Creating new local environment for task default...
+2026-06-29 05:24:55,221 INFO [20260629_052414_e1a23a] tools.environments.base: Session snapshot created (session=f98ae14f99fe, cwd=C:\Users\JADON'S)
+2026-06-29 05:24:55,223 INFO [20260629_052414_e1a23a] tools.file_tools: local environment ready for task default
+2026-06-29 05:25:11,055 INFO [20260629_052414_e1a23a] agent.tool_executor: tool read_file completed (26.03s, 10155 chars)
+2026-06-29 05:25:16,189 INFO [20260629_052414_e1a23a] agent.tool_executor: tool terminal completed (4.12s, 234 chars)
+2026-06-29 05:25:16,369 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-35 (_call):169516 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:25:30,736 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-35 (_call):169516 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:25:30,755 INFO [20260629_052414_e1a23a] agent.conversation_loop: API call #2: model=claude-opus-4-8 provider=custom in=0 out=383 total=383 latency=14.5s
+2026-06-29 05:25:34,976 INFO [20260629_052414_e1a23a] agent.tool_executor: tool terminal completed (4.16s, 16134 chars)
+2026-06-29 05:25:50,264 INFO [20260629_052414_e1a23a] agent.tool_executor: tool read_file completed (14.25s, 2784 chars)
+2026-06-29 05:25:50,387 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-41 (_call):167420 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:26:35,965 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-41 (_call):167420 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:26:35,968 INFO [20260629_052414_e1a23a] agent.conversation_loop: API call #3: model=claude-opus-4-8 provider=custom in=0 out=1219 total=1219 latency=45.7s
+2026-06-29 05:26:38,929 WARNING hermes.lint.lsp: lsp[pyright] spawn/initialize failed for C:\Users\JADON'S\AppData\Local\hermes: OSError: [WinError 193] %1 is not a valid Win32 application
+2026-06-29 05:27:10,485 INFO [20260629_052414_e1a23a] agent.tool_executor: tool write_file completed (34.51s, 272 chars)
+2026-06-29 05:27:10,616 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-47 (_call):166436 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:28:19,887 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-47 (_call):166436 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:28:19,889 INFO [20260629_052414_e1a23a] agent.conversation_loop: API call #4: model=claude-opus-4-8 provider=custom in=0 out=2875 total=2875 latency=69.4s
+2026-06-29 05:28:48,420 INFO [20260629_052414_e1a23a] agent.tool_executor: tool write_file completed (28.09s, 273 chars)
+2026-06-29 05:28:48,524 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-53 (_call):141120 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:28:54,970 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-53 (_call):141120 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:28:54,977 INFO [20260629_052414_e1a23a] agent.conversation_loop: API call #5: model=claude-opus-4-8 provider=custom in=0 out=91 total=91 latency=6.5s
+2026-06-29 05:28:58,676 WARNING [20260629_052414_e1a23a] agent.tool_executor: Tool terminal returned error (3.69s): {"output": "Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.", "exit_code
+2026-06-29 05:28:58,797 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-55 (_call):170644 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:29:04,088 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-55 (_call):170644 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:29:04,095 INFO [20260629_052414_e1a23a] agent.conversation_loop: API call #6: model=claude-opus-4-8 provider=custom in=0 out=58 total=58 latency=5.4s
+2026-06-29 05:29:08,431 WARNING [20260629_052414_e1a23a] agent.tool_executor: Tool terminal returned error (4.33s): {"output": "C:\\Users\\JADON'S\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\python.exe: can't open file \"C:\\\\c\\\\Users\\\\JADON'S\\\\AppData\\\\Local\\\\hermes\\\\scripts\\\\im
+2026-06-29 05:29:08,580 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-57 (_call):168396 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:29:13,637 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-57 (_call):168396 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:29:13,640 INFO [20260629_052414_e1a23a] agent.conversation_loop: API call #7: model=claude-opus-4-8 provider=custom in=0 out=69 total=69 latency=5.2s
+2026-06-29 05:29:16,469 WARNING [20260629_052414_e1a23a] agent.tool_executor: Tool terminal returned error (2.81s): {"output": "C:\\Users\\JADON'S\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\python.exe: can't open file \"C:\\\\c\\\\Users\\\\JADON'S\\\\AppData\\\\Local\\\\hermes\\\\scripts\\\\im
+2026-06-29 05:29:16,544 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-59 (_call):169368 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:29:24,562 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-59 (_call):169368 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:29:24,564 INFO [20260629_052414_e1a23a] agent.conversation_loop: API call #8: model=claude-opus-4-8 provider=custom in=0 out=216 total=216 latency=8.1s
+2026-06-29 05:34:24,916 WARNING [20260629_052414_e1a23a] agent.tool_executor: Tool execute_code returned error (300.34s): {"status": "error", "error": "BLOCKED: execute_code script timed out without user response. The user has NOT consented to running this code. Do NOT retry, do NOT rephrase the script, and do NOT attemp
+2026-06-29 05:34:25,016 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-60 (_call):154204 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:34:42,177 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-60 (_call):154204 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:34:42,182 INFO [20260629_052414_e1a23a] agent.conversation_loop: API call #9: model=claude-opus-4-8 provider=custom in=0 out=392 total=392 latency=17.2s
+2026-06-29 05:34:42,603 INFO [20260629_052414_e1a23a] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=claude-opus-4-8 api_calls=9/60 budget=8/60 tool_turns=8 last_msg_role=assistant response_len=1429 session=20260629_052414_e1a23a
+2026-06-29 05:34:42,866 INFO agent.auxiliary_client: Auxiliary auto-detect: using main provider custom (claude-opus-4-8)
+2026-06-29 05:34:42,867 INFO agent.auxiliary_client: Auxiliary title_generation: using auto (claude-opus-4-8) at https://api.codemax.pro/v1/
+2026-06-29 05:34:56,631 INFO tools.terminal_tool: Cleaned up inactive environment for task: default
+2026-06-29 05:39:22,435 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-06-29 05:39:22,503 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-06-29 05:39:22,503 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-06-29 05:39:23,465 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-06-29 05:39:23,465 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-06-29 05:39:23,475 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-06-29 05:39:23,486 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-06-29 05:39:23,486 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: openrouter
+2026-06-29 05:39:23,486 INFO hermes_cli.plugins: Plugin 'openrouter' registered image_gen provider: nous
+2026-06-29 05:39:23,493 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-06-29 05:39:23,527 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-06-29 05:39:23,561 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-06-29 05:39:23,576 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-06-29 05:39:23,576 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-06-29 05:39:23,576 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-06-29 05:39:23,604 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-06-29 05:39:23,604 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-06-29 05:39:23,613 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-06-29 05:39:23,629 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-06-29 05:39:23,632 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-06-29 05:39:29,843 INFO hermes_cli.plugins: Plugin discovery complete: 51 found, 44 enabled
+2026-06-29 05:39:31,186 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-06-29 05:39:31,785 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-06-29 05:39:32,469 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-06-29 05:39:32,506 INFO cron.scheduler_provider: In-process cron scheduler started (interval=60s)
+2026-06-29 05:39:34,595 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:64913
+2026-06-29 05:39:46,165 INFO run_agent: Loaded environment variables from C:\Users\JADON'S\AppData\Local\hermes\.env
+2026-06-29 05:39:49,827 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=Thread-12 (_build):171572 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:39:49,827 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=Thread-11 (_build):171516 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:39:51,294 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-06-29 05:39:51,364 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-06-29 05:39:51,892 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (claude-opus-4-8)
+2026-06-29 05:39:51,992 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 05:39:52,032 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (claude-opus-4-8)
+2026-06-29 05:39:53,163 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 05:39:53,173 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 05:39:53,183 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 05:39:53,193 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 05:39:53,213 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 05:39:53,233 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 05:39:53,802 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (claude-opus-4-8)
+2026-06-29 05:39:53,876 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (claude-opus-4-8)
+2026-06-29 05:39:53,954 WARNING tools.registry: check_fn check_web_api_key returned False; dependent tools will be unavailable this turn
+2026-06-29 05:39:54,003 WARNING tools.registry: check_fn check_web_api_key returned False; dependent tools will be unavailable this turn
+2026-06-29 05:39:54,772 INFO agent.model_metadata: Could not detect context length for model 'claude-opus-4-8' at https://api.codemax.pro/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-06-29 05:39:54,782 INFO agent.model_metadata: Could not detect context length for model 'claude-opus-4-8' at https://api.codemax.pro/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-06-29 05:39:54,783 INFO agent.model_metadata: Using hardcoded context length 1,000,000 for model 'claude-opus-4-8' (custom endpoint, catalog match on 'claude-opus-4-8')
+2026-06-29 05:39:54,783 INFO agent.model_metadata: Using hardcoded context length 1,000,000 for model 'claude-opus-4-8' (custom endpoint, catalog match on 'claude-opus-4-8')
+2026-06-29 05:40:31,885 INFO hermes_cli.nous_auth_keepalive: Nous auth keepalive requires re-login: No access token found for Nous Portal login.
+2026-06-29 05:42:06,426 INFO [20260629_052414_e1a23a] agent.turn_context: conversation turn: session=20260629_052414_e1a23a model=claude-opus-4-8 provider=custom platform=tui history=0 msg='Hermes Bidirectional Sync\r   Auto-sync before starting Hermes\r =================...'
+2026-06-29 05:42:13,362 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-47 (_call):168648 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:42:14,826 INFO [20260629_052414_e1a23a] run_agent: OpenAI client aborted (stream_interrupt_abort, shared=False, tcp_force_closed=0, deferred_close=stranger_thread) thread=Thread-40 (run):165080 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:42:14,831 INFO [20260629_052414_e1a23a] agent.conversation_loop: Turn ended: reason=interrupted_during_api_call model=claude-opus-4-8 api_calls=1/60 budget=1/60 tool_turns=0 last_msg_role=user response_len=65 session=20260629_052414_e1a23a
+2026-06-29 05:42:28,668 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-47 (_call):168648 provider=custom base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:42:47,737 INFO agent.model_metadata: Could not detect context length for model 'claude-opus-4-8' at https://api.codemax.pro/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-06-29 05:42:47,738 INFO agent.model_metadata: Using hardcoded context length 1,000,000 for model 'claude-opus-4-8' (custom endpoint, catalog match on 'claude-opus-4-8')
+2026-06-29 05:42:47,844 INFO run_agent: OpenAI client created (switch_model, shared=True) thread=asyncio_1:171412 provider=custom:api.codemax.pro base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:42:48,128 INFO agent.model_metadata: Could not detect context length for model 'claude-opus-4-8' at https://api.codemax.pro/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-06-29 05:42:48,129 INFO agent.model_metadata: Using hardcoded context length 1,000,000 for model 'claude-opus-4-8' (custom endpoint, catalog match on 'claude-opus-4-8')
+2026-06-29 05:42:48,130 INFO agent.agent_runtime_helpers: Model switched in-place: claude-opus-4-8 (custom) -> claude-opus-4-8 (custom:api.codemax.pro)
+2026-06-29 05:42:50,314 ERROR cli: Failed to save config: [WinError 5] Access is denied: "C:\\Users\\JADON'S\\AppData\\Local\\hermes\\.config_lftk7tr7.tmp" -> "C:\\Users\\JADON'S\\AppData\\Local\\hermes\\config.yaml"
+2026-06-29 05:42:58,309 INFO [20260629_052414_e1a23a] agent.turn_context: conversation turn: session=20260629_052414_e1a23a model=claude-opus-4-8 provider=custom:api.codemax.pro platform=tui history=2 msg='Hermes Bidirectional Sync\r Auto-sync before starting Hermes\r ===================...'
+2026-06-29 05:42:58,319 INFO [20260629_052414_e1a23a] agent.conversation_loop: Repaired 2 message-alternation violations before request (session=20260629_052414_e1a23a)
+2026-06-29 05:42:58,385 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-64 (_call):164296 provider=custom:api.codemax.pro base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:43:09,049 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-64 (_call):164296 provider=custom:api.codemax.pro base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:43:09,055 INFO [20260629_052414_e1a23a] agent.conversation_loop: API call #1: model=claude-opus-4-8 provider=custom:api.codemax.pro in=8219 out=386 total=8605 latency=10.7s
+2026-06-29 05:43:09,179 INFO tools.file_tools: Creating new local environment for task default...
+2026-06-29 05:43:17,869 INFO tools.environments.base: Session snapshot created (session=4ff242716a72, cwd=C:\Users\JADON'S)
+2026-06-29 05:43:17,871 INFO tools.file_tools: local environment ready for task default
+2026-06-29 05:43:39,190 INFO agent.tool_executor: tool read_file completed (30.09s, 4166 chars)
+2026-06-29 05:43:39,694 INFO agent.tool_executor: tool read_file completed (30.60s, 14499 chars)
+2026-06-29 05:43:39,820 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-75 (_call):167024 provider=custom:api.codemax.pro base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:44:35,759 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-75 (_call):167024 provider=custom:api.codemax.pro base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:44:35,764 INFO [20260629_052414_e1a23a] agent.conversation_loop: API call #2: model=claude-opus-4-8 provider=custom:api.codemax.pro in=10971 out=4064 total=15035 latency=56.0s
+2026-06-29 05:44:41,015 WARNING hermes.lint.lsp: lsp[pyright] spawn/initialize failed for C:\Users\JADON'S\AppData\Local\hermes: OSError: [WinError 193] %1 is not a valid Win32 application
+2026-06-29 05:45:33,224 INFO agent.tool_executor: tool write_file completed (57.41s, 272 chars)
+2026-06-29 05:45:33,294 INFO agent.tool_executor: tool write_file completed (57.48s, 273 chars)
+2026-06-29 05:45:33,438 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-86 (_call):161992 provider=custom:api.codemax.pro base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:45:38,716 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-86 (_call):161992 provider=custom:api.codemax.pro base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:45:38,719 INFO [20260629_052414_e1a23a] agent.conversation_loop: API call #3: model=claude-opus-4-8 provider=custom:api.codemax.pro in=14995 out=107 total=15102 latency=5.4s
+2026-06-29 05:45:44,467 INFO [20260629_052414_e1a23a] agent.tool_executor: tool terminal completed (5.37s, 618 chars)
+2026-06-29 05:45:44,627 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-88 (_call):171200 provider=custom:api.codemax.pro base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:45:51,241 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-88 (_call):171200 provider=custom:api.codemax.pro base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:45:51,251 INFO [20260629_052414_e1a23a] agent.conversation_loop: API call #4: model=claude-opus-4-8 provider=custom:api.codemax.pro in=15281 out=235 total=15516 latency=6.8s
+2026-06-29 05:45:57,049 INFO [20260629_052414_e1a23a] agent.tool_executor: tool terminal completed (5.78s, 65 chars)
+2026-06-29 05:45:57,157 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-90 (_call):170792 provider=custom:api.codemax.pro base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:46:02,951 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-90 (_call):170792 provider=custom:api.codemax.pro base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:46:02,955 INFO [20260629_052414_e1a23a] agent.conversation_loop: API call #5: model=claude-opus-4-8 provider=custom:api.codemax.pro in=15463 out=209 total=15672 latency=5.9s
+2026-06-29 05:46:06,756 WARNING [20260629_052414_e1a23a] agent.tool_executor: Tool terminal returned error (3.79s): {"output": "/usr/bin/bash: line 3: sqlite3: command not found", "exit_code": 127, "error": null}
+2026-06-29 05:46:11,119 WARNING [20260629_052414_e1a23a] agent.tool_executor: Tool terminal returned error (3.34s): {"output": "/usr/bin/bash: line 3: sqlite3: command not found", "exit_code": 127, "error": null}
+2026-06-29 05:46:11,211 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-93 (_call):171052 provider=custom:api.codemax.pro base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:46:16,189 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-93 (_call):171052 provider=custom:api.codemax.pro base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:46:16,193 INFO [20260629_052414_e1a23a] agent.conversation_loop: API call #6: model=claude-opus-4-8 provider=custom:api.codemax.pro in=15704 out=182 total=15886 latency=5.1s
+2026-06-29 05:46:23,459 INFO [20260629_052414_e1a23a] agent.tool_executor: tool terminal completed (7.24s, 124 chars)
+2026-06-29 05:46:23,655 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-95 (_call):171916 provider=custom:api.codemax.pro base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:46:32,578 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-95 (_call):171916 provider=custom:api.codemax.pro base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:46:32,581 INFO [20260629_052414_e1a23a] agent.conversation_loop: API call #7: model=claude-opus-4-8 provider=custom:api.codemax.pro in=15929 out=322 total=16251 latency=9.1s
+2026-06-29 05:46:35,931 INFO [20260629_052414_e1a23a] agent.tool_executor: tool terminal completed (3.33s, 357 chars)
+2026-06-29 05:46:36,086 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-97 (_call):169336 provider=custom:api.codemax.pro base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:46:41,647 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-97 (_call):169336 provider=custom:api.codemax.pro base_url=https://api.codemax.pro/v1 model=claude-opus-4-8
+2026-06-29 05:46:41,649 INFO [20260629_052414_e1a23a] agent.conversation_loop: API call #8: model=claude-opus-4-8 provider=custom:api.codemax.pro in=16166 out=134 total=16300 latency=5.7s

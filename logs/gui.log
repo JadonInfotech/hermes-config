@@ -73,3 +73,50 @@ PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ZADON\\AppData\\Loca
 2026-06-29 02:37:09,725 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
 2026-06-29 02:37:10,284 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
 2026-06-29 02:37:13,934 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:49238
+2026-06-29 03:17:13,975 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-06-29 03:17:14,705 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-06-29 03:17:15,678 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-06-29 03:17:17,443 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:54441
+2026-06-29 03:17:28,708 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:17:31,351 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:17:34,522 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:17:38,690 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:17:46,883 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:18:10,394 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:18:11,483 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:18:13,594 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:18:17,729 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:11,595 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:12,790 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:14,961 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:41,409 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:42,529 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:44,634 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:53,053 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:54,165 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:04,135 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:05,243 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:24,042 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:25,138 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:36,627 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:37,754 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:48,969 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:54,508 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:57,094 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:36:56,796 INFO tui_gateway.ws: ws closed peer=127.0.0.1:54441 reason=client_disconnect(code=1006,reason=) messages=610 parse_errors=0 dispatch_crashes=0 send_failures=0 reaped_sessions=0 detached_sessions=1
+2026-06-29 03:38:10,531 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-06-29 03:38:11,209 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-06-29 03:38:12,226 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-06-29 03:38:14,937 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:56949
+2026-06-29 05:20:30,655 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-06-29 05:20:31,283 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-06-29 05:20:32,193 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-06-29 05:20:34,158 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:63106
+2026-06-29 05:22:22,194 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-06-29 05:22:22,885 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-06-29 05:22:23,252 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-06-29 05:22:26,195 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:63459
+2026-06-29 05:39:31,186 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/hermes-achievements/
+2026-06-29 05:39:31,785 INFO hermes_cli.web_server: Mounted plugin API routes: /api/plugins/kanban/
+2026-06-29 05:39:32,469 INFO hermes_cli.web_server: Desktop cron scheduler started (provider=builtin, interval=60s)
+2026-06-29 05:39:34,595 INFO tui_gateway.ws: ws accepted peer=127.0.0.1:64913

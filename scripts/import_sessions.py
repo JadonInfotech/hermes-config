@@ -4,8 +4,9 @@
 CRITICAL SAFETY RULES:
 1. NEVER delete existing database - merge incrementally
 2. Skip corrupted JSON files - log and continue
-3. Only update sessions that have CHANGES (compare message counts)
-4. Never lose user data
+3. Only update sessions that have NEW messages (compare message counts)
+4. Never lose user data - if in doubt, keep existing
+5. Handle NULL message_count in database (treat as 0)
 """
 
 import sqlite3
@@ -30,38 +31,28 @@ def fix_merge_conflict(content):
     """Remove Git merge conflict markers and resolve conflicts.
     Strategy: Keep the version with MORE messages (more complete).
     """
-    # Check for conflict markers
     if '<<<<<<< ' not in content:
         return content, False
     
-    # Pattern to find conflict blocks
     pattern = r'<<<<<<< .+?\n(.*?)=======\n(.*?)>>>>>>> .+?\n'
     
     def resolve_conflict(match):
         ours = match.group(1)
         theirs = match.group(2)
-        
-        # Count message-related lines in each version
-        # More message entries = more complete
         ours_lines = ours.count('"role":') + ours.count('"content":')
         theirs_lines = theirs.count('"role":') + theirs.count('"content":')
-        
-        if theirs_lines > ours_lines:
-            return theirs
-        return ours
+        return theirs if theirs_lines > ours_lines else ours
     
     fixed = re.sub(pattern, resolve_conflict, content, flags=re.DOTALL)
     return fixed, True
 
 def validate_json(content):
     """Validate JSON and try to fix common issues."""
-    # Try to parse as-is
     try:
         return json.loads(content), False
-    except json.JSONDecodeError as e:
+    except json.JSONDecodeError:
         pass
     
-    # Try fixing merge conflicts
     fixed_content, was_fixed = fix_merge_conflict(content)
     if was_fixed:
         try:
@@ -69,8 +60,6 @@ def validate_json(content):
         except json.JSONDecodeError:
             pass
     
-    # Try to truncate at last valid complete object
-    # This handles truncated JSON files
     for i in range(len(content) - 1, 0, -1):
         if content[i] == '}':
             try:
@@ -80,6 +69,13 @@ def validate_json(content):
     
     return None, False
 
+def get_actual_message_count(conn, session_id):
+    """Get actual message count from DB, with safe NULL handling."""
+    cursor = conn.cursor()
+    cursor.execute('SELECT COUNT(*) FROM messages WHERE session_id = ?', (session_id,))
+    result = cursor.fetchone()[0]
+    return result if result is not None else 0
+
 def import_sessions():
     session_files = glob.glob(os.path.join(EXPORT_DIR, '*.json'))
     print(f'Found {len(session_files)} session files to import')
@@ -88,21 +84,18 @@ def import_sessions():
         print('No sessions to import')
         return True
     
-    # Check if Hermes is running
     import subprocess
     result = subprocess.run(['tasklist'], capture_output=True, text=True)
     if 'Hermes.exe' in result.stdout:
         print('WARNING: Hermes is running! Close Hermes first for safe import.')
         print('Continuing anyway - will be careful with the database.')
     
-    # Open existing database (never delete it!)
     if not os.path.exists(DB_PATH):
         print('No existing database - creating new one')
         conn = sqlite3.connect(DB_PATH)
         create_schema(conn)
     else:
         conn = sqlite3.connect(DB_PATH)
-        # Verify schema exists
         try:
             conn.execute('SELECT 1 FROM sessions LIMIT 1')
         except sqlite3.OperationalError:
@@ -111,9 +104,17 @@ def import_sessions():
     
     cursor = conn.cursor()
     
-    # Get existing session IDs for tracking
+    # Get existing session IDs - handle NULL message_count safely
     cursor.execute('SELECT id, message_count FROM sessions')
-    existing_sessions = {row[0]: row[1] for row in cursor.fetchall()}
+    existing_sessions = {}
+    for row in cursor.fetchall():
+        session_id, msg_count = row
+        # Treat NULL as 0, and get ACTUAL count from messages table
+        actual_count = get_actual_message_count(conn, session_id)
+        existing_sessions[session_id] = {
+            'stored_count': msg_count if msg_count is not None else 0,
+            'actual_count': actual_count
+        }
     print(f'Existing sessions in DB: {len(existing_sessions)}')
     
     sessions_imported = 0
@@ -125,7 +126,6 @@ def import_sessions():
     for filepath in session_files:
         session_id = os.path.basename(filepath).replace('.json', '')
         
-        # Read and parse file
         try:
             with open(filepath, 'r', encoding='utf-8') as f:
                 content = f.read()
@@ -140,28 +140,29 @@ def import_sessions():
             if was_fixed:
                 print(f'  Fixed merge conflict in: {session_id}')
             
-            # Get session data
             session_id = session.get('id', session_id)
             file_msg_count = len(session.get('messages', []))
             
-            # Check if this is an update to existing session
+            # Check if this session exists in DB
             if session_id in existing_sessions:
-                existing_count = existing_sessions[session_id]
-                # Only update if file has MORE messages than existing
-                if file_msg_count <= existing_count:
+                existing_info = existing_sessions[session_id]
+                existing_actual_count = existing_info['actual_count']
+                
+                # SAFE COMPARISON: handle None/NULL safely
+                # Only update if file has MORE messages than actual DB count
+                if file_msg_count <= existing_actual_count:
                     sessions_skipped += 1
-                    print(f'  Skipped (up to date): {session_id} ({file_msg_count} msgs)')
+                    print(f'  Skipped (up to date): {session_id} ({existing_actual_count} msgs in DB)')
                     continue
                 else:
                     # Delete old messages for this session before re-importing
                     cursor.execute('DELETE FROM messages WHERE session_id = ?', (session_id,))
-                    print(f'  Updating existing: {session_id} ({existing_count} -> {file_msg_count} msgs)')
+                    print(f'  Updating existing: {session_id} ({existing_actual_count} -> {file_msg_count} msgs)')
                     sessions_updated += 1
             else:
                 print(f'  Importing new: {session_id} ({file_msg_count} msgs)')
                 sessions_imported += 1
             
-            # Session columns in order
             session_cols = ['id', 'source', 'user_id', 'model', 'model_config', 'system_prompt',
                 'parent_session_id', 'started_at', 'ended_at', 'end_reason', 'message_count',
                 'tool_call_count', 'input_tokens', 'output_tokens', 'cache_read_tokens',
@@ -191,7 +192,6 @@ def import_sessions():
             placeholders = ','.join(['?' for _ in session_cols])
             conn.execute(f'INSERT OR REPLACE INTO sessions ({",".join(session_cols)}) VALUES ({placeholders})', session_data)
             
-            # Import messages
             msg_cols = ['id', 'session_id', 'role', 'content', 'tool_call_id', 'tool_calls', 'tool_name',
                        'timestamp', 'token_count', 'finish_reason', 'reasoning', 'reasoning_content',
                        'reasoning_details', 'codex_reasoning_items', 'codex_message_items',
@@ -199,7 +199,7 @@ def import_sessions():
 
             for msg in session.get('messages', []):
                 msg_data = []
-                msg['session_id'] = session_id  # Ensure session_id is set
+                msg['session_id'] = session_id
                 for col in msg_cols:
                     val = msg.get(col)
                     if val is None or val == '':
@@ -246,7 +246,6 @@ def import_sessions():
 
 def create_schema(conn):
     """Create the database schema if it doesn't exist."""
-    # Create sessions table
     conn.execute('''
     CREATE TABLE IF NOT EXISTS sessions (
         id TEXT PRIMARY KEY, source TEXT, user_id TEXT, model TEXT, model_config TEXT,
@@ -261,7 +260,6 @@ def create_schema(conn):
     )
     ''')
     
-    # Create messages table
     conn.execute('''
     CREATE TABLE IF NOT EXISTS messages (
         id INTEGER PRIMARY KEY AUTOINCREMENT, session_id TEXT, role TEXT, content TEXT,
@@ -272,13 +270,11 @@ def create_schema(conn):
     )
     ''')
     
-    # Create FTS table
     conn.execute('''
     CREATE VIRTUAL TABLE IF NOT EXISTS messages_fts 
     USING fts5(session_id, role, content, content="messages", content_rowid="id")
     ''')
     
-    # Create supporting tables
     conn.execute('CREATE TABLE IF NOT EXISTS schema_version (version INTEGER)')
     conn.execute('CREATE TABLE IF NOT EXISTS state_meta (key TEXT PRIMARY KEY, value TEXT)')
     conn.execute('''
@@ -290,10 +286,8 @@ def create_schema(conn):
     )
     ''')
     
-    # Schema version
     conn.execute('INSERT OR IGNORE INTO schema_version VALUES (1)')
     
-    # Create indexes
     conn.execute('CREATE INDEX IF NOT EXISTS idx_sessions_source ON sessions(source)')
     conn.execute('CREATE INDEX IF NOT EXISTS idx_sessions_source_id ON sessions(source, id)')
     conn.execute('CREATE INDEX IF NOT EXISTS idx_sessions_parent ON sessions(parent_session_id)')

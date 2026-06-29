@@ -108,3 +108,82 @@ PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ZADON\\AppData\\Loca
 2026-06-29 02:55:51,718 WARNING [20260615_224206_01466a] agent.tool_executor: Tool terminal returned error (3.69s): {"output": "Traceback (most recent call last):\r\n  File \"C:\\Users\\JADON'S\\AppData\\Local\\hermes\\scripts\\check_schema.py\", line 2, in <module>\r\n    conn = sqlite3.connect(r'C:\\Users\\JADON'
 2026-06-29 02:59:14,739 WARNING [20260615_224206_01466a] agent.tool_executor: Tool terminal returned error (4.11s): {"output": "Hermes dir: C:\\Users\\JADON'S\\AppData\\Local\\hermes\r\nDB path: C:\\Users\\JADON'S\\AppData\\Local\\hermes\\state.db\r\nFound 1 sessions to export\r\n  Exported: 20260615_224206_01466a 
 2026-06-29 03:01:03,249 WARNING [20260615_224206_01466a] agent.tool_executor: Tool terminal returned error (4.05s): {"output": "Hermes dir: C:\\Users\\JADON'S\\AppData\\Local\\hermes\r\nDB path: C:\\Users\\JADON'S\\AppData\\Local\\hermes\\state.db\r\nFound 1 session files to import\r\nTraceback (most recent call la
+2026-06-29 03:08:16,379 WARNING [20260615_224206_01466a] agent.tool_executor: Tool terminal returned error (4.75s): {"output": "fatal: pathspec '.gitconfig' did not match any files", "exit_code": 128, "error": null}
+2026-06-29 03:08:23,358 WARNING [20260615_224206_01466a] agent.tool_executor: Tool patch returned error (0.00s): {"error": "Background review denied non-whitelisted tool: patch. Only memory/skill tools are allowed."}
+2026-06-29 03:08:41,847 WARNING [20260615_224206_01466a] agent.tool_executor: Tool skill_manage returned error (0.09s): {"error": "file_content is required for 'write_file'.", "success": false}
+2026-06-29 03:08:55,309 WARNING [20260615_224206_01466a] agent.tool_executor: Tool skill_manage returned error (0.81s): {"success": false, "error": "Could not find a match for old_string in the file\n\nDid you mean one of these sections?\n   9| ---\n  10| \n  11| # Hermes Config Sync\n  12| \n  13| Sync your Hermes con
+2026-06-29 03:09:14,942 WARNING [20260615_224206_01466a] agent.tool_executor: Tool skill_manage returned error (0.27s): {"success": false, "error": "Could not find a match for old_string in the file\n\nDid you mean one of these sections?\n   9| ---\n  10| \n  11| # Hermes Config Sync\n  12| \n  13| Sync your Hermes con
+2026-06-29 03:17:28,708 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:17:31,351 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:17:34,522 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:17:38,690 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:17:46,883 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:18:10,394 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:18:11,483 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:18:13,594 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:18:17,729 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:11,595 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:12,790 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:14,961 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:41,409 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:42,529 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:44,634 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:53,053 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:20:54,165 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:04,135 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:05,243 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:24,042 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:25,138 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:36,627 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:37,754 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:48,969 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:51,329 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-06-29 03:21:51,379 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-06-29 03:21:51,747 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 03:21:52,657 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 03:21:52,669 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 03:21:52,678 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 03:21:52,987 WARNING tools.registry: check_fn check_web_api_key returned False; dependent tools will be unavailable this turn
+2026-06-29 03:21:54,508 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:57,094 WARNING tui_gateway.server: TUI session store unavailable — continuing without state.db features: no such column: expires_at
+2026-06-29 03:21:57,348 WARNING cli: Failed to initialize SessionDB — session will NOT be indexed for search: no such column: expires_at
+2026-06-29 03:23:15,897 WARNING [20260629_032145_1abc86] agent.tool_executor: Tool terminal returned error (17.56s): {"output": "total 8\ndrwxr-xr-x 1 JADON'S 197121 0 Jun 14 10:54 .\ndrwxr-xr-x 1 JADON'S 197121 0 Jun 29 03:21 ..\n-rw-r--r-- 1 JADON'S 197121    1880 Jun 29 01:13 C:\\Users\\JADON'S\\AppData\\Local\\h
+2026-06-29 03:24:52,379 WARNING [20260629_032145_1abc86] agent.tool_executor: Tool terminal returned error (20.61s): {"output": "", "exit_code": 1, "error": null, "exit_code_meaning": "Some directories were inaccessible (partial results may still be valid)"}
+2026-06-29 03:29:43,597 WARNING [20260629_032145_1abc86] agent.tool_executor: Tool terminal returned error (183.35s): {"output": "./hermes-agent/hermes_cli/kanban_db.py:    #      all, so RENAME raises OperationalError: no such column (the crash\n./hermes-agent/hermes_state.py:            if \"no such table\" in msg 
+2026-06-29 03:31:39,559 WARNING hermes.lint.lsp: lsp[pyright] spawn/initialize failed for C:\Users\JADON'S\AppData\Local\hermes: OSError: [WinError 193] %1 is not a valid Win32 application
+2026-06-29 03:35:42,210 WARNING [20260629_032145_1abc86] agent.tool_executor: Tool terminal returned error (5.45s): {"output": "rm: cannot remove 'state.db-shm': Device or resource busy\nrm: cannot remove 'state.db-wal': Device or resource busy", "exit_code": 1, "error": null}
+2026-06-29 03:36:51,595 WARNING [20260629_032145_1abc86] agent.tool_executor: Tool skill_manage returned error (0.64s): {"success": false, "error": "Could not find a match for old_string in the file\n\nDid you mean one of these sections?\n  58| Thumbs.db\n  59| \n  60| # Hermes installer\n  61| desktop-build-stamp.json
+2026-06-29 03:38:39,933 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-06-29 03:38:39,995 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-06-29 03:38:40,244 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 03:38:40,905 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 03:38:40,915 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 03:38:40,925 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 03:38:41,172 WARNING tools.registry: check_fn check_web_api_key returned False; dependent tools will be unavailable this turn
+2026-06-29 05:24:20,922 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-06-29 05:24:21,046 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-06-29 05:24:21,505 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 05:24:22,795 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 05:24:22,816 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 05:24:22,845 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 05:24:23,345 WARNING tools.registry: check_fn check_web_api_key returned False; dependent tools will be unavailable this turn
+2026-06-29 05:26:38,929 WARNING hermes.lint.lsp: lsp[pyright] spawn/initialize failed for C:\Users\JADON'S\AppData\Local\hermes: OSError: [WinError 193] %1 is not a valid Win32 application
+2026-06-29 05:28:58,676 WARNING [20260629_052414_e1a23a] agent.tool_executor: Tool terminal returned error (3.69s): {"output": "Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.", "exit_code
+2026-06-29 05:29:08,431 WARNING [20260629_052414_e1a23a] agent.tool_executor: Tool terminal returned error (4.33s): {"output": "C:\\Users\\JADON'S\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\python.exe: can't open file \"C:\\\\c\\\\Users\\\\JADON'S\\\\AppData\\\\Local\\\\hermes\\\\scripts\\\\im
+2026-06-29 05:29:16,469 WARNING [20260629_052414_e1a23a] agent.tool_executor: Tool terminal returned error (2.81s): {"output": "C:\\Users\\JADON'S\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none\\python.exe: can't open file \"C:\\\\c\\\\Users\\\\JADON'S\\\\AppData\\\\Local\\\\hermes\\\\scripts\\\\im
+2026-06-29 05:34:24,916 WARNING [20260629_052414_e1a23a] agent.tool_executor: Tool execute_code returned error (300.34s): {"status": "error", "error": "BLOCKED: execute_code script timed out without user response. The user has NOT consented to running this code. Do NOT retry, do NOT rephrase the script, and do NOT attemp
+2026-06-29 05:39:51,294 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-06-29 05:39:51,364 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-06-29 05:39:51,992 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 05:39:53,163 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 05:39:53,173 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-06-29 05:39:53,183 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 05:39:53,193 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 05:39:53,213 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 05:39:53,233 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-06-29 05:39:53,954 WARNING tools.registry: check_fn check_web_api_key returned False; dependent tools will be unavailable this turn
+2026-06-29 05:39:54,003 WARNING tools.registry: check_fn check_web_api_key returned False; dependent tools will be unavailable this turn
+2026-06-29 05:42:50,314 ERROR cli: Failed to save config: [WinError 5] Access is denied: "C:\\Users\\JADON'S\\AppData\\Local\\hermes\\.config_lftk7tr7.tmp" -> "C:\\Users\\JADON'S\\AppData\\Local\\hermes\\config.yaml"
+2026-06-29 05:44:41,015 WARNING hermes.lint.lsp: lsp[pyright] spawn/initialize failed for C:\Users\JADON'S\AppData\Local\hermes: OSError: [WinError 193] %1 is not a valid Win32 application
+2026-06-29 05:46:06,756 WARNING [20260629_052414_e1a23a] agent.tool_executor: Tool terminal returned error (3.79s): {"output": "/usr/bin/bash: line 3: sqlite3: command not found", "exit_code": 127, "error": null}
+2026-06-29 05:46:11,119 WARNING [20260629_052414_e1a23a] agent.tool_executor: Tool terminal returned error (3.34s): {"output": "/usr/bin/bash: line 3: sqlite3: command not found", "exit_code": 127, "error": null}

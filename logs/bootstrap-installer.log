@@ -1195,3 +1195,4 @@
 2026-06-26T17:04:58.511693Z  INFO bootstrap.log: ✓ Desktop packaged app ready: C:\Users\ZADON\AppData\Local\hermes\hermes-agent\apps\desktop\release\win-unpacked\Hermes.exe (not launching; --build-only) stage=rebuild
 2026-06-26T17:04:58.567635Z  INFO hermes_bootstrap_lib::update: update stage stage=rebuild state=Succeeded duration_ms=Some(1907) error=None
 2026-06-26T17:04:58.568022Z  INFO hermes_bootstrap_lib::bootstrap: launching Hermes desktop exe_path="C:\\Users\\ZADON\\AppData\\Local\\hermes\\hermes-agent\\apps\\desktop\\release\\win-unpacked\\Hermes.exe"
+2026-06-28T22:53:28.410001Z  INFO hermes_bootstrap_lib: Hermes installer starting mode=Install force_setup=false
